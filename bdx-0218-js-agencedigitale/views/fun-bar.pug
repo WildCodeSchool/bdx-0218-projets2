@@ -1,0 +1,10 @@
+section#funBar.bg-red.pt-l.pb-l
+  .container
+    #counter
+      .row.text-center.text-white
+        - for (var i = 0; i < fun.length; i++)
+          .col-4
+            i.fas.fa-4x(class=fun[i].picto)
+            .counter-value(data-count=fun[i].numbers) 0
+            h2= fun[i].name
+  // /.container

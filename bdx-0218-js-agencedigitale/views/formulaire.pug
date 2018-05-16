@@ -1,0 +1,57 @@
+.formEmploi#formEmploi
+  h2 Deposer une offre
+  form#myForm(class='form-emploi' method='POST' action='/recruteur/addEmploi')
+    .container.form-ent
+      .row.formOffre
+        .col-6.col-sm-4
+          label.form_col(for='nom_poste') Poste :
+          input#nom_poste(name='nom_poste', type='text', placeholder='Saisissez votre emploi de rêve', required)
+          span.tooltip Un poste ne peut pas faire moins de 2 caract&egrave;res
+        .col-6.col-sm-4
+          label.form_col(for='duree') Dur&eacute;e :
+          input#duree(name='duree', type='text', placeholder='La durée de votre offre', required)
+          span.tooltip La dur&eacute;e doit &ecirc;tre sup&eacute;rieure &agrave; 0
+        .col-12.col-sm-4
+          label.form_col(for='localisation') Lieu :
+          input#localisation(name='localisation', type='text', placeholder='L\'endroit idéal', required)
+          span.tooltip Le lieu ne peut pas etre vide
+      .row.formOffre
+        .col-6.col-sm-2
+          label.form_col(for='recruteur') Entreprise :
+          input#recruteur(name='recruteur', type='text', placeholder='Votre nom', required)
+          span.tooltip Le champ entreprise ne peut pas &ecirc;tre vide
+        .col-6.col-sm-4
+          label.form_col(for='diplome') Dipl&ocirc;me :
+          input#diplome(name='diplome', type='text', placeholder='Le diplôme minimum souhaité', required)
+          span.tooltip Le champ dipl&ocirc;me ne peut pas &ecirc;tre vide
+        .col-6.col-sm-4
+          label.form_col(for='experience') Exp&eacute;rience :
+          input#experience(name='experience', type='textarea', placeholder='L\'expérience qui fait la différence', required)
+          span.tooltip Le champ exp&eacute;rience ne peut pas &ecirc;tre vide
+        .col-6.col-sm-2
+          label.form_col(for='departement') Departement :
+          input#departement(name='departement', type='textarea', placeholder='00', maxlength='3', pattern='{1,3}', required)
+          span.tooltip Le champ dept ne peut être vide
+      .row.formOffre
+        .col-12.col-sm-6
+          label.form_col(for='poste') Description du poste :
+          textarea#poste(name='poste', rows='5', required)
+          span.tooltip La description du poste ne peut pas &ecirc;tre vide
+        .col-12.col-sm-6
+          label.form_col(for='entreprise') Description de l&apos;entreprise :
+          textarea#entreprise(name='entreprise', rows='5', required)
+          span.tooltip La description de l&apos;entreprise ne peut pas &ecirc;tre vide
+      .row.formOffre
+        .col-12.col-sm-6
+          label.form_col(for='competences') Comp&eacute;tences requises :
+          textarea#descProfil(name='competences', rows='5', required)
+          span.tooltip La description du profil ne peut pas &ecirc;tre vide
+        .col-12.col-sm-6
+          .row.envoiImg
+            .col-12
+              label.form_col(for='logo') Logo :
+              input#logo(name='logo', type='file')
+              span.tooltip Le logo ne peut pas &ecirc;tre absent
+          .row.formOffre
+        .col-12.formSubmit.mb-4.pt-4
+          input(type='submit', value="Envoyer mon offre d'emploi")

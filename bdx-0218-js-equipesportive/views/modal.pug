@@ -1,0 +1,73 @@
+- for (let x = 0; x < joueurs.length; x++)
+  -let modalTag = 'player' + x +'-modal';  
+  -let dNone = '';
+  div(id = modalTag).modal.fade(tabindex='-1', role='dialog', aria-labelledby= modalTag, aria-hidden='true')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-body
+          video(autoplay='autoplay', loop='loop')
+            source(src= joueurs[x].media, type='video/mp4')
+          ul.player-identity
+            li
+              strong #{joueurs[x].prenom} #{joueurs[x].nom}
+            li
+              strong Poste :
+              |  #{joueurs[x].poste}
+            li
+              strong Shoot :
+              |  #{joueurs[x].shoot}
+            li
+              strong Naissance :
+              |  #{joueurs[x].naissance.toISOString().slice(0,10)}
+            li
+              strong Age :
+              |  #{joueurs[x].age} ans
+            li
+              strong Nationalité :
+              img(src= joueurs[x].flag, style='height: 15px;')
+            li
+              strong Poids :
+              |  #{joueurs[x].poids}
+            li
+              strong Taille :
+              |  #{joueurs[x].taille}
+          .container 
+            .row
+              div(id= 'ldBar-match'+ x, class = 'col-xs-1 col-md-6 col-lg-3')
+                div(class ='ldBar label-center pl_match' + x, data-stroke='data:ldbar/res,gradient(0,1,#2196f3,#07407d)', data-preset="circle", style="width:100%;height:70%;margin:auto", data-stats = joueurs[x].played_matchs)  
+              
+              div(id= 'ldBar-goals'+ x, class='col-xs-1 col-md-6 col-lg-3')
+                div(class ='ldBar label-center pl_goals' + x, data-stroke='data:ldbar/res,gradient(0,1,#2196f3,#07407d)', data-preset="circle", style="width:100%;height:70%;margin:auto", data-stats = joueurs[x].goals)    
+              
+              div(id= 'ldBar-assists'+ x, class = 'col-xs-1 col-md-6 col-lg-3')
+                div(class ='ldBar label-center pl_assists' + x, data-stroke='data:ldbar/res,gradient(0,1,#2196f3,#07407d)', data-preset="circle", style="width:100%;height:70%;margin:auto", data-stats = joueurs[x].assists)
+
+              div(id= 'ldBar-points'+ x, class = 'col-xs-1 col-md-6 col-lg-3')
+                div(class ='ldBar label-center pl_points' + x, data-stroke='data:ldbar/res,gradient(0,1,#2196f3,#07407d)', data-preset="circle", style="width:100%;height:70%;margin:auto", data-stats = joueurs[x].points)
+
+                                        
+              
+              div(id= 'ldBar-penalty'+ x, class = 'col-xs-1 col-md-6 col-lg-3')
+                div(class ='ldBar label-center pl_penalty' + x, data-stroke='data:ldbar/res,gradient(0,1,#2196f3,#07407d)', data-preset="circle", style="width:100%;height:70%;margin:auto", data-stats = joueurs[x].penalty)  
+              
+              div(id= 'ldBar-shoots'+ x, class = 'col-xs-1 col-md-6 col-lg-3')
+                div(class ='ldBar label-center pl_shoots' + x, data-stroke='data:ldbar/res,gradient(0,1,#2196f3,#07407d)', data-preset="circle", style="width:100%;height:70%;margin:auto", data-stats = joueurs[x].shoots)
+
+
+              div(id= 'ldBar-efficiency'+ x, class = 'col-xs-1 col-md-6 col-lg-3')
+                div(class ='ldBar label-center pl_efficiency' + x, data-stroke='data:ldbar/res,gradient(0,1,#2196f3,#07407d)', data-preset="circle", style="width:100%;height:70%;margin:auto", data-stats = joueurs[x].efficiency)
+
+              
+              div(id= 'ldBar-shutouts'+ x, class = 'col-xs-1 col-md-6 col-lg-3')
+                div(class ='ldBar label-center pl_shutouts' + x, data-stroke='data:ldbar/res,gradient(0,1,#2196f3,#07407d)', data-preset="circle", style="width:100%;height:70%;margin:auto", data-stats = joueurs[x].shutouts)
+
+            
+
+              div(id= 'ldBar-saves'+ x, class = 'col-xs-1 col-md-6 col-lg-3')
+                div(class ='ldBar label-center pl_saves' + x, data-stroke='data:ldbar/res,gradient(0,1,#2196f3,#07407d)', data-preset="circle", style="width:100%;height:70%;margin:auto", data-stats = joueurs[x].saves)
+
+              div(id= 'ldBar-saves-percent'+ x, class = 'col-xs-1 col-md-6 col-lg-3')
+                div(class ='ldBar label-center pl_saves_percent' + x, data-stroke='data:ldbar/res,gradient(0,1,#2196f3,#07407d)', data-preset="circle", style="width:100%;height:70%;margin:auto", data-stats = joueurs[x].saves_percent)

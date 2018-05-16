@@ -1,0 +1,82 @@
+section#myFooter
+  .container
+    .row.myMain
+      .col-12.col-sm-6.col-lg-3.infos
+        // 1er colonne
+        h3 Navigation
+        ul
+          li.cl-effect-1
+            a(href='#') Home
+          li.cl-effect-1
+            a(href='#') Pr&eacute;sentation
+          li.cl-effect-1
+            a(href='#') Entreprise
+          li.cl-effect-1
+            a(href='#') Collaborateurs
+          li.cl-effect-1
+            a(href='#') Nous rejoindre
+          li.cl-effect-1
+            a(href='#') Team
+      .col-12.col-sm-6.col-lg-3.infos
+        // 2eme colonne
+        h3 Contact
+        - for (var i = 0; i < contact.length; i++)
+          ul
+            li= contact[i].adresse
+            li= contact[i].mail
+            li= contact[i].tel
+        h3 Horaires
+        ul
+          li 09h00-18h00
+          li Week-end : Ferm&eacute;
+      .col-12.col-sm-6.col-lg-3.infos
+        // 3eme colonne
+        span.input.input--minoru
+          input#input-16.input__field.input__field--yoko(type='text')
+          label.input__label.input__label--yoko(for='input-16')
+            span.input__label-content.input__label-content--yoko Name
+        span.input.input--minoru
+          input#input-16a.input__field.input__field--yoko(type='text')
+          label.input__label.input__label--yoko.mail(for='input-16')
+            span.input__label-content.input__label-content--yoko Mail
+        span.input.input--minoru
+          input#input-16b.input__field.input__field--yoko(type='text')
+          label.input__label.input__label--yoko.tel(for='input-16')
+            span.input__label-content.input__label-content--yoko T&eacute;l&eacute;phone
+        .form-group
+          label(for='exampleFormControlTextarea1')
+          textarea#myTextArea.form-control(rows='2' style='background-color: #8f201a;color: white;')
+        button.btn.btn-outline(type='button') Valider
+        // MON BOUTON
+      .col-12.col-sm-6.col-lg-3.infos
+        // 4eme colonne
+        .map-responsive
+          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2828.632993430025!2d-0.5771663844630365!3d44.849406979098504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd552877d0d48f6b%3A0x5fbdab78bc865820!2s68+Cours+de+Verdun%2C+33000+Bordeaux!5e0!3m2!1sen!2sfr!4v1522140911990' width='600' height='450' frameborder='0' style='border:0' allowfullscreen='')
+        // End map-reponsive
+      // End col map
+    // End row map
+    .row(style='text-align: center;')
+      .col-12.icon
+        a(href='https://www.instagram.com/wildcodeschool/' target='_blank')
+          i.fab.fa-instagram
+        a(href='https://www.linkedin.com/school/wild-code-school/' target='_blank')
+          i.fab.fa-linkedin
+        a(href='https://twitter.com/wildcodeschool?lang=en' target='_blank')
+          i.fab.fa-twitter-square
+        a(href='https://github.com/wildcodeschool')
+          i.fab.fa-github
+        a(href='https://www.facebook.com/wildcodeschool/' target='_blank')
+          i.fab.fa-facebook-square
+    .row.mention(style='text-align: center;')
+      .col
+        p Wow is magic
+      .col.cl-effect-1
+        a(href='https://www.service-public.fr/professionnels-entreprises/vosdroits/F31228' target='_blank') Mentions l&eacute;gales
+      .col.cl-effect-1
+        p
+          a(href='https://github.com/WildCodeSchool/bdx-0218-js-agencedigitale' target='_blank') What&apos;s Ouside The World
+      .col.cl-effect-1
+        a(href='/login') Administration
+    // End row mention
+  // End Container
+// End myFooter

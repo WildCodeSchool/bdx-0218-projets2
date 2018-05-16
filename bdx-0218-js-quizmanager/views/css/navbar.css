@@ -1,0 +1,153 @@
+header {
+  margin-bottom: 5rem;
+}
+
+.containerNav{
+    display: flex;
+}
+
+.col{
+    flex: 1;
+}
+
+.titrenavhaut {
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+    padding: 2.1rem;
+    margin: 2rem;
+    list-style: none;
+}
+
+.titrenavhaut>li>a {
+    color: yellow;
+    position: center;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 2.8rem;
+  }
+
+.titrenavhaut>li>a:hover {
+    color: red;
+  }
+
+.leftmenu, .rightmenu{
+	border-bottom: 0.3rem solid yellow;
+	text-align: center;
+}
+
+
+
+.navDesktop {
+	text-align: center;
+}
+
+.quizzTitre {
+	margin: 50px 3rem -30px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 6rem;
+  font-weight: bold;
+  color : red;
+}
+
+.QUIZLANDTITRE{
+    list-style: none;
+    text-decoration: none;
+    color: inherit
+}
+
+.titrenavhaut{
+	min-height: 0px;
+  margin-bottom: 0px;
+}
+
+
+
+/*MENU BURGER*/
+.hamburger{
+  background:none;
+  position:absolute;
+  line-height:45px;
+  padding:21px 15px 0px 15px;
+  color:yellow;
+  border:0;
+  font-size:3em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+  color: yellow;
+}
+
+.cross{
+  background:none;
+  position:absolute;
+  padding:21px 15px 0px 15px;
+  color:yellow;
+  border:0;
+  font-size:5em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+  color: red;
+}
+.menu{ top: 0px;z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#fffd54ff;  position:absolute; text-align:center; font-size:12px; height : 100%;}
+.menu ul {margin-top: 13%; padding: 0; list-style-type: none; list-style-image: none;margin-left: 0px;}
+.menu li {font-family: 'Dosis', sans-serif; display: block;   padding:15px 0 15px 0;}
+.menu li:hover{display: block; background:#fffd54ff; padding:15px 0 15px 0;}
+.menu ul li a { text-decoration:none;  margin: 0px;}
+.menu ul li a:hover {  color: #666; text-decoration:none;}
+.menu a{text-decoration:none; color:red; font-size: 33px;}
+.menu a:hover{text-decoration:none; color:#666;}
+.menu ul li a:hover{
+  border : none;
+  color: blue;
+}
+
+.glyphicon-home{
+  color:white;
+  font-size:1.5em;
+  margin-top:5px;
+  margin:0 auto;
+}
+/*FIN MENU BURGER*/
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+#floatt{
+  animation: float 6s ease-in-out infinite;
+}
+/*PASSAGE NAV DESKTOP-MOBILE*/
+@media (max-width: 968px) {
+      .navDesktop{
+        display: none;
+          visibility: hidden;
+          }
+}
+
+@media (min-width: 968px) {
+        .cross , .hamburger , .navBurger{
+          display: none;
+          visibility: hidden;
+                  }
+}
+
+@media (max-width: 968px) {
+      header{
+        margin-bottom : -4%;
+          }
+}
+
+/*FIN PASSAGE NAV DESKTOP-MOBILE*/

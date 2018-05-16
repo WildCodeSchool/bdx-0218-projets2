@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+
+<section class="titre_faq">
+    <h1>Page d'administration</h1>
+</section>
+
+<section class="titre">
+    <p>Veuillez vous identifier pour pouvoir poursuivre</p>
+</section>
+
+<section>
+    <form action="/checkAdmin" method="POST">
+        <input type="text" name="username" placeholder="Entrez votre nom d'utilisateur"/>
+        <input type="password" name="password" placeholder="Entrez votre mot de passe"/>
+        <input type="submit" name="Envoyer">
+    </form>
+</section>
+
+<footer>
+    <% include ../partials/footer %>
+</footer>
+<% include ../partials/scripts %>
+</body>
+</html>

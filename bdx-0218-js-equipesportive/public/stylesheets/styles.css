@@ -1,0 +1,730 @@
+@import "//fonts.googleapis.com/css?family=Bangers";
+#demo {
+  text-align: center;
+  font-family: Bangers;
+  color: white;
+  font-size: 35px;
+  letter-spacing: 2px;
+  text-shadow: white 1px 1px, white -1px 1px, white -1px -1px, white 1px -1px;
+}
+
+/*Fin compteur*/
+
+li, h3 {
+  font-family: bangers;
+}
+
+.navbar ul li {
+  font-size: 2rem;
+  font-family: Bangers;
+}
+
+.navbar-nav li:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.navbar-light {
+  background-color: #4AA0D9;
+  border-color: rgb(56, 56, 226);
+}
+
+.homeVid {
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homePage {
+  background-image: url('../images/img/passion.jpg');
+  height: 100%;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+}
+
+.logo {
+  position: absolute;
+  height: 1%;
+  width: 100%;
+  text-align: center;
+}
+
+.titreMatchs, h2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-align: center;
+  margin: 10px;
+  font-family: bangers;
+  color: #4AA0D9;
+}
+
+.comingMatchs {
+  padding: 20px;
+  text-decoration: underline;
+  background-color: #4AA0D9;
+  font-family: bangers;
+}
+
+.vs {
+  width: 5vw;
+  height: 10vh;
+}
+
+.matchs {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 25vh;
+  font-size: 30px;
+}
+
+.matchs.row {
+  border: white 5px solid;
+}
+
+.equipeUne {
+  width: 15vw;
+  height: 20vh;
+  margin-top: 2vh;
+}
+
+.equipeDeux {
+  width: 15vw;
+  height: 20vh;
+  margin-top: 2vh;
+}
+
+.logo img {
+  width: 50%;
+  margin: 0;
+}
+
+.logo .versus {
+  width: 15vw;
+  height: 20vh;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-device-width: 768px) {
+  video {
+    display: none
+  }
+  .home {
+    height: 100vh;
+  }
+  .logo .versus {
+    width: 100%;
+  }
+  #demo {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 1.2rem;
+  }
+  .matchs {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 20vh;
+    width: auto;
+    font-size: 20px;
+  }
+  .equipeUne {
+    width: 18vw;
+    height: 15vh;
+    margin-top: 1vh;
+  }
+  .equipeDeux {
+    width: 18vw;
+    height: 15vh;
+    margin-top: 1vh;
+  }
+  .vs {
+    width: 10vw;
+    height: 8vh;
+  }
+}
+
+.logo .versus {
+  margin-right: auto;
+  width: 10vh;
+  height: auto;
+  margin-top: 10%;
+}
+
+.logo .logoUn {
+  width: 40vw;
+  height: auto;
+  margin-top: 10%;
+}
+
+.logo .logoDeux {
+  width: 40vw;
+  height: auto;
+  margin-top: 10%;
+}
+
+@media (min-device-width: 780px) {
+  .homePage {
+    background-image: none;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-top: 30vh;
+  }
+  .logoUn {
+    order: 1;
+  }
+  .logoDeux {
+    order: 3;
+  }
+  .versus {
+    order: 2;
+  }
+  .logo .versus {
+    margin-right: auto;
+    width: 20vh;
+    height: 25vh;
+    margin-top: 15vh;
+    opacity: 0.7;
+  }
+  .logo .logoUn {
+    width: 35vw;
+    height: auto;
+    margin-top: 10vh;
+  }
+  .logo .logoDeux {
+    width: 35vw;
+    height: auto;
+    margin-top: 10vh;
+  }
+  #demo {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 3rem;
+  }
+}
+
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+/* LOGIN BEN */
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4AA0D9;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 5px 0 6px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 22%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.password {
+  float: right;
+  padding-top: 16px;
+}
+
+#id01 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/* FIN LOGIN BEN */
+
+/* STORY */
+
+.story {
+  text-align: center;
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
+  background-color: #4AA0D9;
+}
+
+.story>h3 {
+  margin-top: 20px;
+  color: white;
+}
+
+.story>.row {
+  margin: 0;
+}
+
+.story>.row>.col-sm-8 {
+  color: #4d4d4d;
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px 30px 5px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 20px 0 rgba(43, 52, 62, 0.7);
+}
+
+.story>.row>.col-sm-8>.texte-histoire {
+  text-align: justify;
+}
+
+.story>.row>.col-sm-8>button {
+  margin: 5px 5px 20px 5px;
+  padding: 8px 20px 8px 20px;
+  background-color: #4AA0D9;
+  color: white;
+  border: 1px dotted white;
+  border-radius: 5px;
+}
+
+/*Players section*/
+
+#players, #staff {
+  background-color: #4AA0D9;
+}
+
+#teamGallery {
+  display: flex;
+  justify-content: center;
+}
+
+#teamGalleryContent .container .row .col-lg-3 {
+  margin: 8vh 0 5% 0;
+}
+
+#teamGalleryContent h3, .team-gallery h2 {
+  text-align: center;
+  margin: auto;
+}
+
+#teamGalleryContent .photo-container {
+  width: 240px;
+  height: 320px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px 0 rgba(43, 52, 62, 0.7);
+}
+
+
+#teamGalleryContent .staff-aligned {
+  min-width: 100%;
+  display: flex;
+}
+
+#teamGalleryContent .staff-aligned img {
+  margin: auto;
+}
+
+#teamGalleryContent .photo-container a img {
+  transition: all linear 0.2s;
+  transform: scale(1.05, 1.05);
+}
+
+#teamGalleryContent .photo-container:hover a img {
+  transition: all linear 0.2s;
+  transform: scale(1, 1);
+  cursor: pointer;
+}
+
+#teamGalleryContent .photo-background {
+  background: url('../images/player_photo_background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  transition: all linear 0.2s;
+  transform: scale(1, 1);
+}
+
+#teamGalleryContent .photo-container:hover .photo-background {
+  transform: scale(1.05, 1.05);
+}
+
+#teamGalleryContent .photo-container .photo-caption {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0%;
+  background: #00000066;
+  width: 100%;
+  color: white;
+}
+
+#teamGalleryContent .photo-container .photo-caption .flag {
+  width: 10%;
+  flex: 0 1 auto;
+  margin: 0 5%;
+}
+
+#teamGalleryContent .caption figcaption {
+  text-align: center;
+}
+
+#teamGalleryContent .photo-container .photo-caption .flag img {
+  width: 100%;
+}
+
+#teamGalleryContent .photo-container .photo-caption .caption {
+  flex: 1 1 auto;
+}
+
+#teamGalleryContent .photo-container .photo-caption .jersey {
+  width: 15%;
+  flex: 0 0 auto;
+}
+
+#teamGalleryContent .photo-container .photo-caption .jersey p {
+  margin: 0;
+}
+
+.modal .modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal .modal-content {
+  height: auto;
+  min-height: 100%;
+  min-width: 100vw;
+  border-radius: 0;
+}
+
+.modal video {
+  width: 40%;
+  margin: 0 30%;
+}
+
+.modal .player-identity {
+  list-style: none;
+}
+
+.modal .player-identity li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #D0D0D0;
+}
+
+#staff .modal .modal-body img:first-child {
+  width: 20%;
+  margin: 0 40%;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: #4AA0D9;
+  border-radius: 0.25rem;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:visited {
+  background-color: #4AA0D9;
+  border-radius: 0.25rem;
+  color: #ffffff;
+}
+
+.nav-tabs {
+  border: none;
+}
+
+.team-gallery a {
+  color: black;
+}
+
+/* CSS CONTACT FORMULAIRE BEN */
+
+/* GENERAL */
+
+.contact-f {
+  background: #F5F5F5;
+  color: #485e74;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1em;
+}
+
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+
+.company-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact {
+  margin-top: 1%;
+}
+
+.brand {
+  font-size: 2.2rem;
+}
+
+.wrapper {
+  box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+  border-radius: 15px;
+}
+
+.wrapper>* {
+  padding: 1em;
+}
+
+.company-info {
+  background: #4AA0D9;
+  border-radius: 15px 0 0 15px;
+}
+
+.contact h3 {
+  text-align: center;
+  text-decoration: none;
+}
+
+.company-info h3, .company-info ul {
+  text-align: center;
+  color: #303030;
+  margin: 0 1rem 0;
+}
+
+.company-info h3 {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.company-info ul li {
+  padding: 5px;
+}
+
+textarea {
+  color: grey;
+}
+
+/* FORM STYLES */
+
+.contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.contact form label {
+  display: block;
+}
+
+.contact form p {
+  margin: 0;
+}
+
+.contact form .full {
+  grid-column: 1 / 3;
+}
+
+.contact form button, .contact form input, .contact form textarea {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #78a388;
+}
+
+.contact form button {
+  background: #4AA0D9;
+  border: 0;
+  text-transform: uppercase;
+  color: white;
+}
+
+.contact form button:hover, .contact form button:focus {
+  background: black;
+  outline: 0;
+  transition: background-color 1s ease-out;
+}
+
+#email-text-size {
+  font-size: 0.9em;
+}
+
+/* MEDIA QUERIES - LARGE SCREENS */
+
+@MEDIA(min-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .wrapper>* {
+    padding: 2em;
+  }
+  .company-info h3, .company-info ul, .brand {
+    text-align: left;
+  }
+}
+
+/* BANDO CSS BEN */
+
+.banner-sponsors {
+  text-align: center;
+  text-decoration: none;
+}
+
+/* FOOTER CSS BEN */
+
+footer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: black;
+  padding: 0;
+}
+
+footer a {
+  color: #4AA0D9;
+}
+
+.footer-logo {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.footer-made {
+  padding-top: 5%;
+  text-align: right;
+  font-style: italic;
+  font-size: 0.65rem;
+  color: white;
+}
+
+footer .adminLogin {
+  color: grey;
+}
+footer .mentions, footer .CGU {
+  color: grey;
+}
+
+.heart {
+  color: red;
+}

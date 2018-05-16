@@ -1,0 +1,136 @@
+header#header
+  .container-fluid
+    .row
+      .col-12.video_header.embed-responsive.embed-responsive-16by9
+        video.embed-responsive-item(autoplay='autoplay' loop='loop' muted='muted')
+          source(src='images/video_header.mp4' type='video/mp4')
+    .logo_wild
+      img.img-fluid(src='images/logo-dev.png')
+    .container-fluid.content_searchbar
+        .row
+          .col-12.col-lg-6.offset-lg-3.text-center
+            form.search_bar(action='/emploi/search' method='post')
+              .input-group
+                input.custom-select(type='text' name="poste", placeholder="Language souhaité")
+              .input-group
+                select.custom-select(name='Dpt')
+                  option(value='') France entiere
+                  optgroup(label='Alsace')
+                    option(value='67')  Bas Rhin
+                    option(value='68')  Haut Rhin
+                  optgroup(label='Aquitaine')
+                    option(value='24') Dordogne
+                    option(value='33') Gironde
+                    option(value='40') Landes
+                    option(value='47') Lot-et-Garonne
+                    option(value='64') Pyr&eacute;n&eacute;es-Atlantiques
+                  optgroup(label='Auvergne')
+                    option(value='03') Allier
+                    option(value='15') Cantal
+                    option(value='43') Haute-Loire
+                    option(value='63') Puy de D&ocirc;me
+                  optgroup(label='Basse Normandie')
+                    option(value='14') Calvados
+                    option(value='50') Manche
+                    option(value='61') Orne
+                  optgroup(label='Bourgnogne')
+                    option(value='58') Ni&egrave;vre
+                    option(value='71') Sa&ocirc;ne-et-Loire
+                    option(value='89') Yonne
+                  optgroup(label='Bretagne')
+                    option(value='22') C&ocirc;tes d&apos;Armor
+                    option(value='29') Finist&egrave;re
+                    option(value='35') Ille-et-Vilaine
+                    option(value='56') Morbihan
+                  optgroup(label='Centre')
+                    option(value='18') Cher
+                    option(value='28') Eure-et-Loir
+                    option(value='36') Indre
+                    option(value='37') Indre-et-Loire
+                    option(value='41') Loir-et-Cher
+                    option(value='45') Loiret
+                  optgroup(label='Champagne Ardenne')
+                    option(value='08') Ardennes
+                    option(value='10') Aube
+                    option(value='51') Marne
+                    option(value='52') Haute-Marne
+                  optgroup(label='Corse')
+                    option(value='2A') Corse-du-Sud
+                    option(value='2B') Haute-Corse
+                  optgroup(label='Franche-Comté')
+                    option(value='25') Doubs
+                    option(value='39') Jura
+                    option(value='70') Haute-Sa&ocirc;ne
+                    option(value='90') Territoire-de-Belfort
+                  optgroup(label='Haute Normandie')
+                    option(value='27') Eure
+                    option(value='76') Seine-Maritime
+                  optgroup(label='Ile de France')
+                    option(value='75') Paris
+                    option(value='77') Seine-et-Marne
+                    option(value='78') Yvelines
+                    option(value='91') Essonne
+                    option(value='92') Hauts-de-Seine
+                    option(value='93') Seine-Saint-Denis
+                    option(value='94') Val-de-Marne
+                  optgroup(label='Languedoc Roussillon')
+                    option(value='11') Aude
+                    option(value='30') Gard
+                    option(value='34') H&eacute;rault
+                    option(value='48') Loz&egrave;re
+                    option(value='66') Pyr&eacute;n&eacute;es-Orientales
+                  optgroup(label='Limousin')
+                    option(value='19') Corr&egrave;ze
+                    option(value='23') Creuse
+                    option(value='87') Haute-Vienne
+                  optgroup(label='Lorraine')
+                    option(value='54') Meurthe-et-Moselle
+                    option(value='55') Meuse
+                    option(value='57') Moselle
+                    option(value='88') Vosges
+                  optgroup(label='Midi Pyrénées')
+                    option(value='09') Ari&egrave;ge
+                    option(value='12') Aveyron
+                    option(value='31') Haute-Garonne
+                    option(value='32') Gers
+                    option(value='46') Lot
+                    option(value='65') Hautes-Pyr&eacute;n&eacute;es
+                    option(value='81') Tarn
+                    option(value='82') Tarn-et-Garonne
+                  optgroup(label='Nord Pas de Calais')
+                    option(value='59') Nord
+                    option(value='62') Pas-de-Calais
+                  optgroup(label='Pays de la Loire')
+                    option(value='44') Loire-Atlantique
+                    option(value='49') Maine-et-Loire
+                    option(value='53') Mayenne
+                    option(value='72') Sarthe
+                    option(value='85') Vend&eacute;e
+                  optgroup(label='Picardie')
+                    option(value='02') Aisne
+                    option(value='60') Oise
+                    option(value='80') Somme
+                  optgroup(label='Poitou Charentes')
+                    option(value='16') Charente
+                    option(value='17') Charente-Maritime
+                    option(value='79') Deux-S&egrave;vres
+                    option(value='86') Vienne
+                  optgroup(label='PACA')
+                    option(value='04') Alpes
+                    option(value='05') Hautes-Alpes
+                    option(value='06') Alpes-Maritimes
+                    option(value='13') Bouches-du-Rh&ocirc;ne
+                    option(value='83') Var
+                    option(value='84') Vaucluse
+                  optgroup(label='Rhones Alpes')
+                    option(value='01') Ain
+                    option(value='07') Ard&egrave;che
+                    option(value='26') Dr&ocirc;me
+                    option(value='38') Is&egrave;re
+                    option(value='42') Loire
+                    option(value='69') Rh&ocirc;ne
+                    option(value='73') Savoie
+                    option(value='74') Haute-Savoie
+                .input-group-append
+                  button.btn.btn-outline-secondary.icon_search(type='submit')
+                    i.fa.fa-search(aria-hidden='true')

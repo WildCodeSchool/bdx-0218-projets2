@@ -1,0 +1,168 @@
+
+/*css de la partie Amis*/
+
+.containerPills {
+      margin-top : 30px;
+     padding: 30px;
+}
+.flex-item {
+     margin: auto;
+     width: 100px;
+     height: 100px;
+}
+.container .tab-pane .active {
+  padding-top: 5px;
+  font-family: 'Gugi', cursive;
+}
+.containerAvatar {
+  padding-top: 40px;
+  font-family: 'Gugi', cursive;
+}
+.fluid1 {
+  width : 150px;
+  padding-bottom: 5px;
+  opacity: 1;
+
+}
+.pseudoAmisProfil {
+  top: 10px;
+}
+.fluid1:hover{
+opacity: 0.7;
+}
+.btn-circle {
+  background-color: white;
+  color: black;
+  width: 140px;
+  height: 140px;
+  padding: 10px 16px;
+  margin-top: 5px;
+  right: 200px;
+  font-size: 24px;
+  border-radius: 150px;
+  border-color: black;
+}
+
+@media (min-width:750px) {
+    .nav-pills {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 769px) {
+  /* .btn-circle{
+    width : 100px;
+    height: 100px;
+    font-size: 20px;
+  }
+} */
+
+@media (max-width: 400px) {
+  /* .btn-circle{
+    width : 50px;
+    height: 50px;
+    font-size: 5px;
+  } */
+  .pseudoAmisProfil {
+    font-size: 10px;
+      text-align: center;
+  }
+}
+
+/*css de la partie Paris en cours*/
+
+.containerParis {
+  font-family: 'Gugi', cursive;
+  padding-top: 40px;
+}
+.textMatch {
+  padding-top: 30px;
+  text-align: center;
+}
+.LotProfil {
+  padding-left: 30px;
+  padding-top: 20px;
+  width: 80px;
+}
+.textLot {
+  padding-top: 5px;
+}
+.textLot1 {
+  padding-top: 5px;
+  padding-left: 20px;
+  
+}
+.textLot2 {
+  padding-top: 5px;
+}
+.fluid2 {
+  height: auto;
+  width: 100px;
+  margin: 0 auto;
+  animation-name: stretch;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+
+}
+
+@keyframes stretch {
+  20% {
+    border-radius: 100%;
+  }
+  50% {
+    background-color: none;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: none;
+  }
+}
+@media (max-width: 770px) {
+  .fluid2 {
+    /* height: 50px;
+    width: 50px; */
+    margin-top: 10px;
+    padding-left: 0px;
+    padding-right: 5px;
+    animation-name: stretch;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: paused;
+
+  }
+  .textMatch {
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .textLot {
+    font-size: 1em;
+    padding-top: 5px;
+    text-align: center;
+  }
+  .textLot1 {
+    font-size: 1em;
+    padding-top: 5px;
+    text-align: center;
+  }
+  .textLot2 {
+    font-size: 1em;
+    padding-top: 5px;
+    text-align: center;
+  }
+  .LotProfil {
+    margin-left: 70px;
+    width: 80px;
+  }
+  .vs {
+    font-size: 3em;
+    left: -30px;
+  }

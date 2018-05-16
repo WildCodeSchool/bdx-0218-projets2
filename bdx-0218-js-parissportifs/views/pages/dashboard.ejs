@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+        <link rel="stylesheet" href="/dashboard.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="dash-title">
+        <h1>Dashboard</h1>
+    </div>
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-12">
+                <form class="form-group" method='POST', enctype='multipart/form-data', action='upload'>
+                    <label for="file"><h4>Change the background Main Page</h4></label>
+                    <input class="form-control-file" type='file' name='file' />
+                    <button type="submit" class="btn easy btn-lg">Envoyer</button>
+                </form>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-12 sonic">
+                <div>
+                    <img class="Sonic" src="https://media.giphy.com/media/3o7aDee5RyONByAZ1K/giphy.gif" alt="Sonic">
+                </div>
+            </div>  
+        </div> 
+    </div>    
+    <footer>
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p>
+                            <i class="fa fa-copyright"></i> eDual. All rights reserved. Designed with
+                            <i class="fa fa-heart"></i> by the Team Wikings
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<% include ../partials/script %>
+
+</html>

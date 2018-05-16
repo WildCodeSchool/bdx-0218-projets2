@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head.ejs %>
+    <link rel="stylesheet" href="administration.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1 class="text-center">Administration</h1>
+    </header>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-3 col-md-6">
+                    <form class="form" role="form" autocomplete="off" id="formLogin" novalidate="" method="POST" action="/users/loginAdmin">
+                        <div class="form-group">
+
+                            <h4>Login please</h4>
+                            <input type="text" name="pseudo" class="form-control input-sm chat-input" placeholder="pseudo" />
+                            </br>
+                            <input type="password" name="password" class="form-control input-sm chat-input" placeholder="password" />
+                            </br>
+                            <div class="wrapper">
+                                <span class="group-btn">
+                                    <!-- <a href="" class="btn btn-primary btn-md">Login</a> -->
+                                    <button type="submit" class="btn yellow btn-lg" id="btnLogin" onclick="submitform()"><a href="/administration/dashboard">Login</a></button>
+                                </span>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <% include ../partials/script %>
+
+</body>
+
+</html>

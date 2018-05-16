@@ -1,0 +1,284 @@
+.partie_creer2 input {
+  width: 90%;
+}
+
+.titreCreer {
+  	margin: 1rem auto;
+  	padding: 1rem;
+  	width: 50%;
+  	background-color: yellow;
+  	color: red;
+  	font-size: 2.7rem;
+  	font-weight: bold;
+  	border: 0.3rem solid red;
+    text-align: center;
+}
+
+.cadreQuestion {
+  	margin: 1rem auto;
+  	padding: 1rem;
+  	width: 50%;
+  	background-color: blue;
+  	color: yellow;
+    font-style: italic;
+  	font-size: 1.5rem;
+  	font-weight: bold;
+  	border: 0.3rem solid #0025f5;
+    text-align: center;
+}
+
+
+.cadreQuestion:hover {
+  	margin: 1rem auto;
+  	padding: 1rem;
+  	width: 50%;
+  	background-color: yellow;
+  	color: blue;
+  	font-size: 1.5rem;
+  	font-weight: bold;
+  	border: 0.3rem solid #0025f5;
+    text-align: center;
+}
+
+.cadreReponse {
+  	margin: 0.3rem auto;
+  	padding: 1rem;
+  	width: 50%;
+  	background-color: blue;
+  	color: yellow;
+    font-style: italic;
+  	font-size: 1.5rem;
+  	font-weight: bold;
+  	border: 0.3rem solid #0025f5;
+    text-align: center;
+}
+
+.boutonsCreationAide{
+  margin: 0.3rem auto;
+  width: 50%;
+  color: yellow;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cadreReponse:hover {
+  	margin: 0.3rem auto;
+  	padding: 1rem;
+  	width: 50%;
+  	background-color: yellow;
+  	color: blue;
+  	font-size: 1.5rem;
+  	font-weight: bold;
+  	border: 0.3rem solid #0025f5;
+    text-align: center;
+}
+.oui {
+  color: yellow;
+  text-align: center;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  width: 7rem;
+  background-color: blue;
+  font-size:1.1rem;
+  font-weight: bold;
+  border: 0.3rem solid yellow;
+}
+
+.oui:hover {
+  color : red;
+	background-color: blue;
+	border: 0.3rem solid red;
+}
+
+#textOui {
+  color : yellow;
+  font-weight: bold;
+  text-decoration: none;
+
+}
+
+#textOui:hover{
+  color: red;
+}
+
+/* Préparation des éléments à afficher, masquer en Js */
+
+#quizAnswers, .move {
+  display: none;
+}
+
+
+
+/* Fin des éléments pour le Js
+
+/* PARTIE GAUCHE QUIZZY*/
+
+.quizzyPng {
+  margin-top: 181px;
+
+}
+
+.quizzy {
+  width: 6rem;
+  margin-right: 50%;
+  margin-left: 40%;
+  margin-bottom: 3rem;
+}
+
+/*DEBUT BULLE QUIZZY*/
+div.speech {
+  overflow-wrap: normal;
+  color: red;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  background-color: yellow;
+  border: 0.3rem solid red;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+  margin-left: 43%;
+  margin-top: 2%;
+  animation: float 6s ease-in-out infinite;
+}
+
+div.speech:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 30px;
+  top: 100px;
+  border: 25px solid;
+  border-color: red transparent transparent red;
+}
+
+div.speech:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 38px;
+  top: 100px;
+  border: 17px solid;
+  border-color: rgb(255,253,84) transparent transparent rgb(255,253,84);
+}
+/*FIN BULLE QUIZZY*/
+
+
+
+.aide {
+  text-align: center;
+  color : white;
+	margin: 1.5rem auto;
+	padding: 1rem;
+	width: 7rem;
+	background-color: #0025f5;;
+	font-size:1.1rem;
+	font-weight: bold;
+	border: 0.3rem solid #0025f5;
+}
+
+
+.aide:hover {
+  color : red;
+	background-color: white;
+	border: 0.3rem solid red;
+}
+
+/*PARTIE ADMIN VERIF*/
+.quizId {
+  color: yellow;
+  text-align: center;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  width: 7rem;
+  background-color: blue;
+  font-size:1.1rem;
+  font-weight: bold;
+  border: 0.3rem solid yellow;
+}
+
+.quizCat {
+  color: yellow;
+  text-align: center;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  width: 7rem;
+  background-color: blue;
+  font-size:1.1rem;
+  font-weight: bold;
+  border: 0.3rem solid yellow;
+}
+
+.quizTitre {
+  color: yellow;
+  text-align: center;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  width: 25rem;
+  background-color: blue;
+  font-size:1.1rem;
+  font-weight: bold;
+  border: 0.3rem solid yellow;
+}
+
+.testbutton {
+  color: yellow;
+  text-align: center;
+  margin: 1.5rem auto;
+  margin-left: 35px;
+  padding: 1rem;
+  background-color: red;
+  font-size:1.1rem;
+  font-weight: bold;
+  border: 0.3rem solid yellow;
+}
+
+.testbutton:hover {
+  background-color: blue;
+}
+
+.testplopid, .testplopcat, .testploptitre, .testplopbtn, .testplopbtnDEL, .testplopbtnVAL {
+  text-align: center;
+}
+
+.modQstform {
+  background-color: red;
+}
+
+.testplopbtnDEL {
+  text-align: center;
+}
+
+/*FIN PARTIE ADMIN VERIF*/
+
+
+
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(15px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+
+@media (max-width: 968px) {
+      .quizzy{
+        margin-right: 46%;
+        margin-left: 25%;
+          }
+}

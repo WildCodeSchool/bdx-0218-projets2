@@ -1,0 +1,67 @@
+body {
+    min-height: 100%;
+    font-size: 62.5%;
+    background-color: white;
+}
+
+.dash-title {
+    background-color: rgb(254, 246, 55);
+    text-align: center;
+    color: black;
+    margin-bottom: 2rem;
+    font-family: 'Gugi', cursive;
+}
+
+.dash-title h1 {
+    font-size: 3rem;
+    font-family: 'Gugi', cursive;
+}
+
+.form-group h4 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Gugi', cursive;
+}
+
+.form-group button {
+    margin-top: 2rem;
+    background-color: yellow;
+    border-color: yellow;
+    color: black;
+    font-family: 'Gugi', cursive;
+}
+
+input {
+    background-color: rgb(80, 80, 80);
+    color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+    margin: auto;
+    
+}
+
+.form-control-file {
+    width: 25rem;
+    border-radius: 0.5rem;
+}
+.Sonic {
+    width:300px;
+}
+
+/* ----- Footer ----- */
+footer {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(237, 237, 237);
+}
+/* Copyright */
+.footer-copyright p {
+  font-size: 0.9rem;
+  margin: 1.2rem 0;
+}
+
+i.fa.fa-heart {
+  color: red;
+}
+

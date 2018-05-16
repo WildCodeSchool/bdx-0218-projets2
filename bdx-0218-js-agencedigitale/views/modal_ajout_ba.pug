@@ -1,0 +1,24 @@
+div.modal.modal-id.modal-ajout(id='modalAjoutBa')
+  .modal-dialog
+      .modal-content
+        .modal-header
+          h2.modal-title AJOUT BAR
+          |
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') &times;
+        |
+        .modal-body
+          form(action='/admin/bar/add')#createBa
+            .form-group
+              label Nom
+              input#nameAdd.form-control(type='text')
+            .form-group
+              label Picto
+              input#pictoAdd.form-control(type='text')
+            .form-group
+              label Chiffres
+              input#numbersAdd.form-control(type='text')
+            button#btnAddBa.btn.btn-primary(type='submit',  data-dismiss='modal') Envoyer
+        |
+        .modal-footer
+          button.btn.btn-secondary(type='button', data-dismiss='modal') Fermer

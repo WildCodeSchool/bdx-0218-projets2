@@ -1,0 +1,62 @@
+#offre_emploi.container
+  .row
+    - for (let i =0; i < emploi.length; i++)
+         - let date_format = new Date(emploi[i].date)
+         - let date_final = date_format.toISOString().slice(0,10);
+         - let nbModal = 'Annonce' + i
+         - let nom_emploi = emploi[i].nom_poste
+         - let url_files = emploi[i].logo
+         - let src_logo = '/images/emplois/'
+         - let src_final = src_logo+ url_files
+         .col-6.col-md-5.offset-1.content_emploi
+          h2= emploi[i].nom_poste
+          .info_emploi
+            img.logo_entreprise(src=src_final)
+            .detail_emploi
+              ul.list_detail
+                li.liste_emploi
+                    i.fa.fa-calendar.mr-2.fa-2x
+                    p= date_final
+                li.liste_emploi
+                    i.fa.fa-building.mr-2.fa-2x
+                    p= emploi[i].recruteur
+                li.liste_emploi
+                    i.fa.fa-briefcase.mr-2.fa-2x
+                    p= emploi[i].duree
+                li.liste_emploi
+                    i.fa.fa-map-marker.mr-2.fa-2x
+                    p= emploi[i].localisation
+          button.btn.btn-primary.btn_modal_emploi(type='button' data-toggle='modal' data-target= '#Annonce' + i) En savoir plus..
+          div(id=nbModal).modal.fade
+            .modal-dialog.modal-lg
+              .modal-content
+                // Modal Header
+                .modal-header
+                  h2.modal-title= emploi[i].nom_poste
+                  button.close(type='button' data-dismiss='modal') &times;
+                // Modal body
+                .modal-body
+                  h3= emploi[i].recruteur
+                  .container
+                    .row
+                      .col-12
+                        .descri_entreprise
+                          p= emploi[i].entreprise
+                  .contexte_annonce
+                    .container
+                      .row
+                        .col-12.col-lg-6
+                          img.logo_modal(src=src_final)
+                        .col-12.col-lg-6.descri_modal
+                          .profil_modal
+                            h4  Description du poste
+                            p= emploi[i].poste
+
+                          .competence_modal
+                            h4  Competence Requise
+                            p
+                                pre.txt_profil_modal= emploi[i].competences
+
+                // Modal footer
+                .modal-footer
+                  button.btn.btn-secondary(type='button' data-dismiss='modal') Fermer

@@ -1,0 +1,49 @@
+div.modal.modal-id.modal-ajout(id='modalAjoutMission')
+  .modal-dialog
+      .modal-content
+        .modal-header
+          h2.modal-title AJOUT OFFRES EMPLOIS
+          |
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') &times;
+        |
+        .modal-body
+          form(action='/admin/missions/add')#createMiss
+            .form-group
+              label Nom du poste
+              input#nomAdd.form-control(type='text')
+            .form-group
+              label Recruteur
+              input#recrutAdd.form-control(type='text')
+            .form-group
+              label Durée
+              input#durAdd.form-control(type='text')
+            .form-group
+              label Localisation
+              input#locAdd.form-control(type='text')
+            .form-group
+              label Département
+              input#depAdd.form-control(type='text')
+            .form-group
+              label Diplôme
+              input#diplAdd.form-control(type='text')
+            .form-group
+              label Expérience
+              input#expAdd.form-control(type='text')
+            .form-group
+              label Poste
+              input#postAdd.form-control(type='text')
+            .form-group
+              label Entreprise
+              input#entrAdd.form-control(type='text')
+            .form-group
+              label Compétences
+              input#compAdd.form-control(type='text')
+            .form-group
+              label Logo
+              input#logoAdd.form-control(type='file')
+            |
+            button#btnAddMiss.btn.btn-primary(type='submit', data-dismiss='modal') Envoyer
+        |
+        .modal-footer
+          button.btn.btn-secondary(type='button', data-dismiss='modal') Fermer

@@ -1,0 +1,28 @@
+.collab.container.mt-4
+  .titre.row
+    h2 Nos diff&eacute;rents collaborateurs
+  .row
+    - for (var i = 0; i < collab.length; i++)
+      .dev.col-12.col-sm-6
+        .perso.row
+          .dev.col-5
+            img.img-fluid.d01(src='images/'+collab[i].images alt='dev01')
+          .devDesc.col-7
+            p.name= collab[i].name
+            p.age= collab[i].age
+            br
+            p.xp Exp&eacute;rience :
+            p.exp= collab[i].experience
+            br
+            p.description
+            p.desc= collab[i].description
+            br
+            .row
+              .lang.col-3
+                i.fab.fa-2x(class=collab[i].techno1)
+              .lang.col-3
+                i.fab.fa-2x(class=collab[i].techno2)
+              .lang.col-3
+                i.fab.fa-2x(class=collab[i].techno3)
+              .lang.col-3
+                i.fab.fa-2x(class=collab[i].techno4)

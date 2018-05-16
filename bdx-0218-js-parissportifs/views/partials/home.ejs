@@ -1,0 +1,105 @@
+
+<div class="slogan container-fluid sloganAppear">
+    <p>Paris avec tes amis <br>sur le e-Sport</p>
+</div>
+
+<div class="container-fluid"><img src="logo/eDual.png" alt="logo eDuel" class="logo img-fluid logoAppear"></div>
+
+<button type="button" class="btn btn-lg btn-connexion " data-toggle="modal" data-target="#boutton_connexion">Connexion</button>
+<div class="modal fade" id="boutton_connexion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Se connecter</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="/users/authentificationUsers">
+                    <div class="form-group">
+                        <input type="pseudo" class="form-control" name="pseudo" placeholder="pseudo">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="password">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary btn-connect btn-arene">Je rentre dans l'arene</button>
+                      </div>
+                </form>
+            </div>
+            <div class="col-auto">
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" id="autoSizingCheck">
+                    <label class="form-check-label" for="autoSizingCheck">
+                  Se souvenir de moi
+                </label>
+                </div>
+            </div>
+             
+                <p class="text-center href=#"><u>Mot de passe oublie?</u></p>
+            </div>
+            <p class="text-center href=#"><u>Mot de passe oublie?</u></p>
+        </div>
+    </div>
+</div>
+
+<br/>
+
+<button type="button" class="btn btn-lg btn-inscription" data-toggle="modal" data-target="#boutton_inscription">Inscription</button>
+<div class="modal fade" id="boutton_inscription" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">M'inscrire sur le site</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/users/addUsers" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="pseudo" placeholder="pseudo">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="email" placeholder="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="password">
+                    </div>
+                    <p class="text-center">Choisis ton avatar</p>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 ml-auto col-4">
+                                <img src="logo-avatar/batman.png" class="img-fluid logo_Avatar_Inscription grab" alt="Logo-Batman"></div>
+                            <div class="col-md-4 ml-auto col-4">
+                                <img src="logo-avatar/Blanka.png" class="img-fluid logo_Avatar_Inscription grab" alt="Logo-Blanka"></div>
+                            <div class="col-md-4 ml-auto col-4">
+                                <img src="logo-avatar/Counter.png" class="img-fluid logo_Avatar_Inscription grab" alt="Logo-Counter"></div>
+                            <div class="col-md-4 ml-auto col-4">
+                                <img src="logo-avatar/mario.png" class="img-fluid logo_Avatar_Inscription grab" alt="Logo-Mario"></div>
+                            <div class="col-md-4 ml-auto col-4">
+                                <img src="logo-avatar/minet.png" class="img-fluid logo_Avatar_Inscription grab" alt="Logo-Minet"></div>
+                            <div class="col-md-4 ml-auto col-4">
+                                <img src="logo-avatar/overw.png" class="img-fluid logo_Avatar_Inscription grab" alt="Logo-ow"></div>
+                            <div class="col-md-4 ml-auto col-4">
+                                <img src="logo-avatar/ronaldo.png" class="img-fluid logo_Avatar_Inscription grab" alt="Logo-ronaldo"></div>
+                            <div class="col-md-4 ml-auto col-4">
+                                <img src="logo-avatar/saalor.png" class="img-fluid logo_Avatar_Inscription grab" alt="Logo-saalor"></div>
+                            <div class="col-md-4 ml-auto col-4">
+                                <img src="logo-avatar/trunk.png" class="img-fluid logo_Avatar_Inscription grab" alt="Logo-trunk"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary btn-arene">Je rentre dans l'arene</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+

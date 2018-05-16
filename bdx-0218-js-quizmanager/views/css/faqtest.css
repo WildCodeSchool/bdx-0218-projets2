@@ -1,0 +1,76 @@
+
+/* FAQ */
+
+.titre_faq h1 {
+	text-align: center;
+    font-size: 2.8rem;
+    border: 0.3rem solid red;
+    background-color: yellow;
+    color: red;
+		margin-top : 1rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+
+/* Espacement entre les questions */
+.faq
+{
+        margin: 2rem 0;
+}
+
+/* Masquer les checkbox et les paragraphes */
+.faq-section input,
+.faq-section p {
+        display: none;
+}
+
+
+/* Si le checkbox est coché, montrer le texte */
+.faq-section input[type=checkbox]:checked~p{
+        display: block;
+        color: yellow;
+        font-size: 1.7rem;
+        border: 0.3rem solid yellow;
+        padding: 2rem;
+        margin-left: 20%;
+        margin-right: 20%;
+        background-color: blue;
+        text-align: justify;
+}
+
+/* Style des label */
+.faq-section label{
+        color : #fff;
+        cursor: pointer;
+        background: blue;
+        display: block;
+        position: relative;
+        padding: 15px;
+        font-weight: bold;
+        text-shadow: 0 1px 0 rgba(255,255,255,.5);
+        transition: all .15s ease-out;
+        text-align: center;
+        font-size: 1.7rem;
+        margin-left: 20%;
+        margin-right: 20%;
+}
+
+/* Éviter de sélectionner le texte en cliquant plusieurs fois */
+.faq-section label::selection{
+        background: none;
+}
+
+.faq-section label:hover{
+        background-color: red;
+}
+
+/* Style du label si le checkbox est coché */
+.faq-section input[type=checkbox]:checked~label{
+        border-color: yellow solid 0.3rem;
+        background: blue
+        box-shadow: 0 0 1px rgba(0,0,0,.4);
+}

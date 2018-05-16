@@ -1,0 +1,23 @@
+section#blog
+  .container
+    .row
+      for blog in blogs
+        .row
+          .col-xs-12.col-sm-4.col-md-4.col-lg-4
+            .picture
+              a(href="/blog/"+blog.id)
+                img.img-fluid(src= blog.images)
+              .keyword_box
+                .keyword_txt= blog.category
+          .col-xs-12.col-sm-7.col-md-7.col-lg-6
+            .content
+              small
+                = moment(blog.date_parution).format('LL')
+                |  |  
+                strong Par 
+                  = blog.autor
+            h4
+              a(href="/blog/"+blog.id)= blog.title
+            p
+              a(href="/blog/"+blog.id)= blog.description
+        hr

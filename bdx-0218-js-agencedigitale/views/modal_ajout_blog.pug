@@ -1,0 +1,37 @@
+div.modal.modal-id.modal-ajout(id='modalAjoutBlog')
+  .modal-dialog
+      .modal-content
+        .modal-header
+          h2.modal-title AJOUT BILLETS DE BLOG
+          |
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') &times;
+        |
+        .modal-body
+          form(action='/admin/blog/add')#createBlog
+            .form-group
+              label Date
+              input.form-control(type='text', name='dateAdd', placeholder='YYYY-MM-DD')
+            .form-group
+              label Titre
+              input#titreAdd.form-control(type='text')
+            .form-group
+              label Contenu
+              textarea#contAdd.form-control.mceEditor( name='contentAdd')
+            .form-group
+              label Images
+              input#imgAdd.form-control(type='file')
+            .form-group
+              label Auteur
+              input#autAdd.form-control(type='text')
+            .form-group
+              label Catégorie
+              input#catAdd.form-control(type='text')
+            .form-group
+              label Description
+              input#descAdd.form-control(type='text')
+            |
+            button#btnAddBlog.btn.btn-primary(type='submit', data-dismiss='modal') Envoyer
+        |
+        .modal-footer
+          button.btn.btn-secondary(type='button', data-dismiss='modal') Fermer

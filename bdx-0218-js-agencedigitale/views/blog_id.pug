@@ -1,0 +1,13 @@
+section#blog
+  .container
+        .row
+          .col-xs-12.col-sm-7.col-md-7.col-lg-10
+            .content
+              small
+                = moment(article.date_parution).format('LL')
+                |  |  
+                strong Par 
+                  = article.autor
+            h4
+              a= article.title
+            p!= article.content

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+
+    	<header>
+                <% include ../partials/headerAdmin %>
+        </header>
+
+    <section class="titre_faq">
+        <h1>Liste des Quiz en cours de validation</h1>
+    </section>
+
+    <main>
+        <div class="row">
+            <div class="testplopid">ID</div>
+            <div class="testplopcat">Categorie</div>
+            <div class="testploptitre">Titre</div>
+            <div class="testplopbtn">Vérification</div>
+            <div class="testplopbtnVAL">Validation</div>
+            <div class="testplopbtnDEL">Suppression</div>
+        </div>
+    </main>
+
+
+    <% include ../partials/scripts %>
+
+        <script type="text/javascript">
+            let plop = <%- JSON.stringify(plop,0,2) %>
+
+            // ID //
+            for (let i = 0; i < plop.length; i++) {
+                var newDiv = document.createElement("div");
+                newDiv.setAttribute("class", "quizId");
+                var newContent = document.createTextNode(plop[i].id);
+                newDiv.appendChild(newContent);
+                let here = document.getElementsByClassName('testplopid');
+                here[0].appendChild(newDiv);
+            }
+
+            // CATEGORY //
+            for (let y = 0; y < plop.length; y++) {
+                var newDiv = document.createElement("div");
+                newDiv.setAttribute("class", "quizCat");
+                var newContent = document.createTextNode(plop[y].category);
+                newDiv.appendChild(newContent);
+                let here = document.getElementsByClassName('testplopcat');
+                here[0].appendChild(newDiv);
+            }
+
+            // TITLE //
+            for (let z = 0; z < plop.length; z++) {
+                var newDiv = document.createElement("div");
+                newDiv.setAttribute("class", "quizTitre");
+                var newContent = document.createTextNode(plop[z].title);
+                newDiv.appendChild(newContent);
+                let here = document.getElementsByClassName('testploptitre');
+                here[0].appendChild(newDiv);
+            }
+
+            // CHECK BUTTON //
+            for (let zx = 0; zx < plop.length; zx++) {
+                var varIdQuiz = plop[zx].id;
+
+                var newDiv = document.createElement("div");
+                newDiv.setAttribute("class", "testbutton");
+                var newContent = document.createTextNode("Vérifier");
+                newDiv.appendChild(newContent);
+                // IIFE => VOIR STACK OVERFLOW //
+                newDiv.onclick = (function (plop, varIdQuiz) {
+                    return function () {
+                        window.location.replace("/editQuiz/" + varIdQuiz);
+                    }
+                })(plop, varIdQuiz);
+                //_____________________________________  //
+                let here = document.getElementsByClassName('testplopbtn');
+
+                here[0].appendChild(newDiv);
+            }
+
+            // DELETE BUTTON //
+            for (let zx = 0; zx < plop.length; zx++) {
+                var varIdQuiz = plop[zx].id;
+
+                var newDiv = document.createElement("div");
+                newDiv.setAttribute("class", "testbutton");
+                var newContent = document.createTextNode("SUPPRIMER");
+                newDiv.appendChild(newContent);
+                // IIFE => VOIR STACK OVERFLOW //
+                newDiv.onclick = (function (plop, varIdQuiz) {
+                    return function () {
+                        window.location.replace("/DELETE/" + varIdQuiz);
+                    }
+                })(plop, varIdQuiz);
+                //_____________________________________  //
+                let here = document.getElementsByClassName('testplopbtnDEL');
+
+                here[0].appendChild(newDiv);
+            }
+
+            // VALIDATE BUTTON //
+            for (let zx = 0; zx < plop.length; zx++) {
+                var varIdQuiz = plop[zx].id;
+
+                var newDiv = document.createElement("div");
+                newDiv.setAttribute("class", "testbutton");
+                var newContent = document.createTextNode("Validation");
+                newDiv.appendChild(newContent);
+                // IIFE => VOIR STACK OVERFLOW //
+                newDiv.onclick = (function (plop, varIdQuiz) {
+                    return function () {
+                        window.location.replace("/VALIDATE/" + varIdQuiz);
+                    }
+                })(plop, varIdQuiz);
+                //_____________________________________  //
+                let here = document.getElementsByClassName('testplopbtnVAL');
+
+                here[0].appendChild(newDiv);
+            }
+        </script>
+
+
+
+</body>
+
+</html>

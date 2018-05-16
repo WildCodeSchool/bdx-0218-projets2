@@ -1,0 +1,60 @@
+.container.margin-tibo
+  section.concept.text-center
+    h1(style='color: #8f201a;') Concept
+    .presentation.text-justify
+      .row
+        p
+          | Ici on aime manger du de bons produits pendant qu'on travail !
+          | Un vrai parcours du combattant pour tous ceux qui n’en connaissent pas forcément les codes. En 2018, chercher un job sur Internet est toujours un calvaire, les sites d’emploi étant peu intuitifs et les sites carrière des entreprises insuffisamment détaillés.
+          | Si tu lis vraiment ce texte tape dans tes mains. Cette folie est on va change rotut ca pour vous offrir toutes les informations dont vous avez besoin pour découvrir celles qui vous intéressent le plus. Chaque semaine on vous offre le meilleur.
+  // End prensetation
+  section.team.concept.text-justify
+    h1.text-center.text-justify Team
+    .row
+      .col-12.col-md-4
+        h4.text-center Ce qu'ils disent sur l'équipe
+        p
+          | A Wild Not You, on ne s’ennuie quasiment jamais. Il y a toujours un quête à déchiffrer ou des amis à aider.
+          | Et sinon, le vendredi c'est apéro, d'habitude c'est Coralie et Julien qui invitent.
+        h4.text-center Good to know
+        p
+          | Tu pourras jouer à Mario Kart toute la journée si tu n'es pas motivé pour travailler et ça se passe dans la cave! Ateliers d’équipes, journées d’inspiration, batailles de polochons, sont de rigueur... Les occasions de questionner et d'enrichir notre manière de travailler ne manquent pas !
+          | Et sinon, bravo à ceux qui lisent ce texte.
+      #photo1.col-12.col-md-8
+        .row
+          .col-12.col-md-6.container_josephine
+            img.image.top.img-fluid.m-1(src='images/josephine.jpg', alt='image du personnel de la team')
+            .overlay
+            img.overlay.bottom.img-fluid.m-1(src='images/josephine2.jpg', alt='image du personnel de la team')
+            h3.overlay.prenom.text-center.josephine Joséphine
+          .col-12.col-md-6.container_josephine
+            img.image.top.img-fluid.m-1(src='images/aurelien.jpg', alt='image du personnel de la team')
+            .overlay
+            img.overlay.bottom.img-fluid.m-1(src='images/aurelien2.jpg', alt='image du personnel de la team')
+            h3.overlay.prenom.text-center.aurelien(style='color: white;') Aurélien
+        .row
+          .col-12.col-md-6.container_josephine
+            img.image.top.img-fluid.m-1(src='images/elisa.jpg', alt='image du personnel de la team')
+            .overlay
+            img.overlay.bottom.img-fluid.m-1(src='images/elisa2.jpg', alt='image du personnel de la team')
+            h3.overlay.prenom.text-center.elisa(style='color: black;') Elisa
+          .col-12.col-md-6.container_josephine
+            img.image.top.img-fluid.m-1(src='images/greg.jpg', alt='image du personnel de la team')
+            .overlay
+            img.overlay.bottom.img-fluid.m-1(src='images/greg2.jpg', alt='image du personnel de la team')
+            h3.overlay.prenom.text-center.greg(style='color: black;') Grégory
+        .row
+          .col-12.col-md-6.container_josephine
+            img.image.bottom.img-fluid.m-1(src='images/alex.jpg', alt='image du personnel de la team')
+            .overlay
+            img.overlay.top.img-fluid.m-1(src='images/alex2.jpg', alt='image du personnel de la team')
+            h3.overlay.prenom.text-center.alexandre(style='color: black;') Alexandre
+
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+script.
+  $(document).ready(function(){
+  $.ajax({url: "/concept3", success: function(result){
+  alert("ok ajax")
+      //- $("#div1").html(result);
+  }});
+  });

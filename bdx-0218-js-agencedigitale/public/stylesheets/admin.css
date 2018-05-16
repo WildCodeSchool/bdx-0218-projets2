@@ -1,0 +1,165 @@
+/*------------------------
+      ADMINISTRATION
+-------------------------*/
+body{
+  background-image: none;
+}
+.divs{
+  display: none;
+}
+#contentBar{
+  display: block;
+}
+.d-table .head .d-table-cell{
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+  font-weight: bold;
+}
+.d-table .d-table-cell{
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 250px;
+  height: 100%;
+  overflow-y: auto;
+  background: #ffffff;
+}
+
+#page-content-wrapper {
+  width: calc(100% - 250px);
+  padding: 20px;
+  position: absolute;
+  top :0;
+  right:0;
+}
+.delete{
+  border: none;
+  color:#007bff;
+  background: none;
+  cursor: pointer;
+}
+.delete:hover{
+  color:#0056b3;
+}
+
+/* Sidebar Styles */
+.nav-profile{
+  text-indent: 0!important;
+  margin-top: 20px;
+}
+.profile-image{
+  width: 105px;
+  height: 105px;
+  margin: auto;
+}
+.profile-image img{
+  max-width: 100%;
+  border-radius: 100%;
+  vertical-align: middle;
+}
+.profile-name{
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li > a {
+  display: block;
+  text-decoration: none;
+  color: #4a4949;
+}
+
+.sidebar-nav li > a:hover {
+  text-decoration: none;
+  background: #f1f6ff;
+}
+.sidebar-nav li.active > a{
+  color: #1991EB;
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #4a4949;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  background: none;
+}
+
+/*Partie Validation*/
+
+.boxValid {
+  background-color: white;
+  border-radius: 0.3em;
+  margin-top:5%;
+  padding:5%;
+}
+.bordDroit{
+  border-right:1px dashed black;
+  border-top:1px dashed black;
+}
+.bordTop{
+  border-top:1px dashed black;
+}
+#admin .fas{
+  text-align:center;
+  padding:2% 47%;
+}
+.fa-times{color:red;}
+.fa-check{color:green;}
+.boxValid .title{font-variant:small-caps; font-size:2em; text-align:left;}
+.boxValid .titleDate{font-size:1.3em; padding-top:9%;}
+.boxValid .text{text-align:justify;}
+.boxValid .textTitle{
+    border-top: 1px dashed black;
+    margin: 2% 30%;
+    padding-top: 2%;
+    text-align: center;
+    font-weight: bold;
+  }
+.boxValid .form-valide {
+  display: block;
+  text-align: center;
+  padding-top:2%;
+}
+
+.boxValid button {
+  background: none;
+  border:none;
+}
+
+
+@media(min-width:768px) {
+  #wrapper {
+    padding-left: 250px;
+  }
+}

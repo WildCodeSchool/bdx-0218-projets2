@@ -1,0 +1,65 @@
+.nextGames {
+    font-family: 'Gugi', cursive;
+    font-size: 15px;
+}
+
+
+li.nav-item {
+    width: 30%;
+}
+
+.logoDiv {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.gameLogo {
+     width: 50%;
+     padding-bottom: 10px;
+}
+
+.active {
+    border: 3
+}
+
+.flash {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    animation: flashing linear 2s 1s infinite;
+}
+
+@keyframes flashing {
+    0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+
+.matches{
+    padding-top: 3px;
+    padding-bottom: 15px;
+    border-top-color: yellow;
+    border-top-style: solid;
+    margin-bottom: 5px;
+}
+
+.matches:hover {
+    background: url(img/background.png) center;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.nextGamesPos {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.team-logo {
+    max-width: 40%;
+}
+
+.timeGame {
+    font-size: 15px;
+}

@@ -1,0 +1,157 @@
+/*Accueil*/
+
+body{
+    background: url(img/background.png)center fixed;
+    background-repeat:no-repeat;
+    font-family: 'Gugi', cursive;
+  }
+
+.slogan{
+    position: relative;
+    margin-top: 10%;
+    font-size: 1.8rem;
+    color: #fff800;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 1);
+}
+
+.logo{
+    position: relative;
+	left: 25%;
+    width: 50%;
+    right: 25%;
+	height: auto;
+	z-index: 1;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    }
+
+.sloganAppear {
+	animation: appear linear 2s;
+}
+.logoAppear {
+	animation: zoom linear 2s;
+}
+
+@keyframes zoom {
+	0% { left: 45%; right: 45%; width: 10%; }
+    20% { left: 40%; right: 40%; width: 20%; }
+	40% { left: 35%; right: 35%; width: 30%; }
+	60% { left: 30%; right: 30%;width: 40%; } 
+	80% { left: 25%; right: 25%;width: 50%; }
+}
+
+@keyframes appear {
+	0% { opacity: 0; } 
+	20% { font-size: 2rem;
+          color: red;
+          opacity: 0; } 
+	50% { opacity: 0.8; } 
+	100% { opacity: 1; }
+}
+
+.btn-connexion{
+    font-size: 1.8rem;
+    background-color:#fff800;
+    left: 25%;
+	width: 50%;
+	right: 25%;
+    position: relative;
+    opacity: 0.9;
+    border-radius: 10px;
+    margin-top: 1%;
+}
+
+.btn-connexion:hover{
+    background-color:orange;
+}
+
+.btn-inscription{
+    font-size: 1.8rem;
+    background-color:#fff800;
+    left: 25%;
+	width: 50%;
+	right: 25%;
+    margin-bottom: auto;
+    position: relative;
+    opacity: 0.9;
+    border-radius: 10px;
+    margin-top: 2%;
+}
+
+.btn-inscription:hover{
+    background-color:orange;
+}
+
+.btn-arene{
+    background-color:#fff800;
+    color: black;
+    width: 100rem;
+    left: 30rem;
+    right: 30rem;
+}
+@media (min-width: 768px) {
+
+    body{
+    background: url(img/arena_desktop2.jpg) center fixed;
+    }
+
+    .slogan {
+        margin-top: 3%;
+    }
+
+    .logo {
+       left: 40%;
+	   width: 20%;
+	   right: 40%;
+	   top: 35%;
+       margin-top: 3%;
+       margin-bottom: 1%;
+	}
+
+    .btn-connexion {
+       font-size: 1rem;
+        left: 40%;
+	   width: 20%;
+	   right: 40%;
+        height: auto;
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+	}
+
+    .btn-inscription {
+      font-size: 1rem;
+        left: 40%;
+	   width: 20%;
+	   right: 40%;
+        height: auto;
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+	}
+}
+
+/*Le CSS - logoavatar du bouton d'inscription */
+
+.img-fluid{
+padding-bottom: 10px;
+}
+
+.logo_Avatar_Inscription{
+padding-bottom: 10px
+}
+
+.logo_Avatar_Inscription{
+opacity: 1;
+}
+.logo_Avatar_Inscription:hover{
+opacity: 0.7;
+}
+
+.logo_Avatar_Inscription:active{
+opacity: 0.3;
+}
+
+.grab{
+    cursor: grab;
+}

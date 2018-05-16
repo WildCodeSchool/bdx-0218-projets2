@@ -1,0 +1,222 @@
+.boutton_equipe{
+  border-color: #11ffee00;
+  background: #11ffee00;
+  cursor:pointer;
+  
+}
+
+.boutton_equipe:hover{
+  transform: scale(1.1);
+}
+
+.boutton_equipe:checked{
+  border-color: #fffd38;
+}
+
+.grad {
+  background: linear-gradient(180deg, #2553b6, #ffffff);
+	background-size: 200% 200%;
+	animation: MoveGrad 10s ease infinite;
+  height:100vh;
+}
+
+.lol {
+  padding-top:10vh;
+  width:100px;
+}
+.team {
+  text-align: center;
+  color:#ffffff;
+  font-size: 2.5em;
+  font-family: 'Gugi', cursive;
+}
+
+#bim, #oups {
+  border:0
+}
+
+.perso {
+  width:50vh;
+}
+
+
+.defie h2 {
+  color:black;
+  font-size: 2.5em;
+  font-family: 'Gugi', cursive;
+  text-align: center;
+}
+.cercle h3 {
+  pa
+  font-family: 'Gugi', cursive;
+  text-align: center;
+  font-size: 1em;
+}
+.alone h3 {
+  font-family: 'Gugi', cursive;
+  text-align: center;
+  font-size: 1em;
+
+}
+.dropdown .btn {
+  width:100%;
+  background-color: #2553b6;
+  border-color:#2553b6;
+  font-family: 'Gugi', cursive;
+  font-size: 1em;
+  color:#ffffff;
+  box-shadow: none;
+}
+.dropdown{
+  padding-top: 5vh;
+}
+.dropdown-menu {
+  width:100%;
+  font-family: 'Gugi', cursive;
+  font-size: 1em;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+  background-color: #fffd38;
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+.alone {
+  display:none;
+}
+
+@keyframes MoveGrad {
+    0%{background-position:55% 0%}
+    50%{background-position:46% 100%}
+    100%{background-position:55% 0%}
+}
+
+@media (max-width: 800px) {
+  .team {
+    font-size: 2em;
+  }
+  .defie h2 {
+    font-size: 2em;
+  }
+}
+@media (max-width: 600px) {
+  .team {
+    font-size: 1em;
+  }
+  .defie h2 {
+    font-size: 1.5em;
+  }
+  .alone {
+    display:inline;
+  }
+  .cercle {
+    display:none;
+  }
+}
+
+.img-fluid3 {
+  opacity: 0.8;
+  }
+  
+  .img-fluid3:active{
+  width: 300px;
+  opacity: 1.5;
+  }
+  
+  .img-fluid4 {
+  opacity: 0.8;
+  }
+  
+  .img-fluid4:active{
+  width: 300px;
+  opacity: 1.5;
+  }
+
+/* -------hinge */
+@-webkit-keyframes hinge {
+  0% {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  20%,
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 80deg);
+    transform: rotate3d(0, 0, 1, 80deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  40%,
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, 60deg);
+    transform: rotate3d(0, 0, 1, 60deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 700px, 0);
+    transform: translate3d(0, 700px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes hinge {
+  0% {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  20%,
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 80deg);
+    transform: rotate3d(0, 0, 1, 80deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  40%,
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, 60deg);
+    transform: rotate3d(0, 0, 1, 60deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 700px, 0);
+    transform: translate3d(0, 700px, 0);
+    opacity: 0;
+  }
+}
+
+.perso {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-name: hinge;
+  animation-name: hinge;
+}
+
+.btn-primary a {
+  color : white;
+}
+
+.btn-primary a:hover {
+  text-decoration : none;
+}

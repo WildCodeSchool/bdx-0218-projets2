@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Test
+  body
+    form#submit(method='post', action='/users/addUsers')
+      input(type='text', name='first', placeholder='First-name')
+      br
+      input(type='text', name='last', placeholder='Last-name')
+      br
+      input(type='text', name='nick', placeholder='Nick-Name')
+      br
+      input(type='number', name='extras', placeholder='Extras')
+      br
+      input(type='submit', value='Submit')
+      
+    // USER LIST
+    h2 User List
+    #userList
+      table
+        thead
+          th Firs
+          th Last
+          th Nick
+          th Extras
+          th Delete ?
+        tbody
+    // /USER LIST
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+    script(src='javascripts/script-ajax.js')

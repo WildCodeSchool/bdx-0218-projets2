@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <% include ../partials/head %>
+</head>
+<body>
+
+<header>
+  <% include ../partials/header %>
+</header>
+
+<section class="contact" id="#contact">
+
+        <form method="POST" action="/sendMail">
+        	<h2 class="titre">CONTACT</h2>
+
+            <input type="text" name="first_name" placeholder="Your name">
+
+            <input type="text" name="last_name" placeholder="Your last name">
+
+            <input type="email" name="email" placeholder="email@pop.com">
+
+            <textarea class="message" name="message" placeholder="Please send us a message or call us : 05 56 21 00 60"></textarea>
+        <input class="bouton" type="submit" value="ENVOYER">
+
+        </form>
+
+</section>
+</body>
+
+<footer>
+    <% include ../partials/footer %>
+</footer>
+<% include ../partials/scripts %>
+</html>

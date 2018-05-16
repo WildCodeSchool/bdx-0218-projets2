@@ -1,0 +1,353 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Les rapaces de GAP | Panneau d'administration
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+  link(rel='stylesheet' type='text/css' href='stylesheets/admin.css')
+
+body
+  a.btn.btn-large.btn-info(href='/logout') Déconnexion
+  h2 Administration
+  .block
+    .video
+      h3 Changer la video d'en-tête
+      form(method='POST', enctype='multipart/form-data' action='/upload')      
+        input(type='file', accept='video/mp4' name='chooseVideo')
+        hr
+        input(type='submit', value='Validez votre vidéo').button
+
+    .matchs
+      h3 Modifier/Ajouter les matchs à venir
+      //- Collapsible Match
+      #accordion.panel-group-main
+        - for (let i = 0; i < matchs.length; i++)
+          -let matchCollapse = 'collapse-match' + i;
+          .panel.panel-default
+            .panel-heading
+              p.panel-title
+                a(data-toggle='collapse' data-parent='#accordion' href='#' + matchCollapse)
+                    |#{matchs[i].id}
+            div(id = matchCollapse).collapse.in
+              .panel-body.panel-collapse
+                //- Collapsible Edit Match
+                #subAccordion.panel-group
+                  .panel.panel-default
+                    .panel-heading
+                      p.panel-title
+                        a(data-toggle='collapse-match' data-parent='#subAccordion' href='#' + matchCollapse)
+                    div(id = matchCollapse)
+                      P.tit Choix Equipe Domicile
+                      form(method='POST' action='/edit-dom?_method=PUT')
+                        select(name='teams')
+                          option(name='equipe' value= 1) Amiens
+                          option(name='equipe' value= 2) Angers
+                          option(name='equipe' value= 3) Bordeaux
+                          option(name='equipe' value= 4) Epinal
+                          option(name='equipe' value= 5) Gap
+                          option(name='equipe' value= 6) Grenoble
+                          option(name='equipe' value= 7) Lyon
+                          option(name='equipe' value= 8) Nice
+                          option(name='equipe' value= 9) Rouen
+                          option(name='equipe' value= 10) Chamonix
+                          option(name='equipe' value= 11) Strasbourg
+                        br
+                        br
+                        input(type='hidden' name='idM' value=matchs[i].id)
+                        input(type='submit' name='home' value='Validez !')
+                      br
+                      br
+                      form(method='POST' action='/edit-date?_method=PUT')                    
+                        label(for='matchdate')
+                          | Veuillez choisir une date:
+                        input(type='hidden' name='idMD' value=matchs[i].id)
+                        input(type='datetime-local' name='matchdate' value='')
+                        input(type='submit' value='Modifier Date')
+                      br
+                      br
+                      P Choix Equipe Exterieur
+                      form(method='POST' action='/edit-ext?_method=PUT')
+                        select(name='teams2')
+                          option(name='equipe' value= 1) Amiens
+                          option(name='equipe' value= 2) Angers
+                          option(name='equipe' value= 3) Bordeaux
+                          option(name='equipe' value= 4) Epinal
+                          option(name='equipe' value= 5) Gap
+                          option(name='equipe' value= 6) Grenoble
+                          option(name='equipe' value= 7) Lyon
+                          option(name='equipe' value= 8) Nice
+                          option(name='equipe' value= 9) Rouen
+                          option(name='equipe' value= 10) Chamonix
+                          option(name='equipe' value= 11) Strasbourg
+                        br
+                        br
+                        input(type='hidden' name='idM2' value=matchs[i].id)
+                        input(type='submit' name='home' value='Validez !')    
+                        br
+                        br
+                      form(method='POST' action='/delete-match?_method=DELETE' data-toggle='validator')
+                        input(type='hidden' name='idMD' value=matchs[i].id)
+                        input(type='submit' value='Supprimer le Match')
+                            
+          #collapse1.panel-collapse.collapse.in
+            .panel-body
+
+              //- Collapsible Edit Match
+              #subAccordion.panel-group
+
+        div
+        .panel.panel-default
+          .panel-heading
+            p.panel-title
+              a(data-toggle='collapse' data-parent='#accordion' href='#collapse2')
+                | Ajouter un Match
+          #collapse2.panel-collapse.collapse
+            .panel-body
+
+                form(method='POST' action='/add-match?_method=POST' data-toggle='validator')
+                    input(type='hidden' name='idMN' value=matchs.length + 1)
+                    input(type='submit' value='Ajouter un Match')
+
+
+
+    div
+      h3 Modifier/Ajouter les membres
+
+      //- Collapsible Membres
+      #accordion.panel-group-main                  
+        - for (let i = 0; i < joueurs.length; i++)
+          - let collapseID = 'collapse-membre' + i;
+          - let date = new Date(joueurs[i].naissance)
+          .panel.panel-default
+            .panel-heading
+              p.panel-title
+                a(data-toggle='collapse' data-parent='#accordion' href='#' + collapseID)
+                  | #{joueurs[i].prenom} #{joueurs[i].nom}
+            div(id = collapseID).panel-collapse.collapse.in
+              .panel-body
+                form(method='POST', enctype='multipart/form-data' action='/edit-membre?_method=PUT' data-toggle='validator')
+                  p.tit Vidéos, photos et drapeaux
+                  p
+                    label Vidéos mp4
+                    input(type='file', accept='video/mp4' name='choosePlayerVideo' multiple)
+                  hr                
+                  p
+                    label Photos 
+                    input(type='file', accept='.png' name='choosePlayerVideo' multiple)
+                  hr
+                  p
+                    label Drapeaux
+                    input(type='file', accept='.jpg' name='choosePlayerVideo' multiple)
+                  p.tit Informations
+                  p
+                    label Poste
+                    input(type='text' value=joueurs[i].poste name='poste' required)
+                  p
+                    label Shoot
+                    input(type='text' value=joueurs[i].shoot name='shoot' required)
+                  p
+                    label Date de naisance
+                    input(type='date' value=date.toISOString().substring(0, 10) name='date_naissance' required)
+                  p
+                    label Age
+                    input(type='number' value=joueurs[i].age name='age' required)
+                  p
+                    label Pays
+                    input(type='text' value=joueurs[i].pays name='pays' required)
+                  p
+                    label Poids (kg)
+                    input(type='number' value=joueurs[i].poids name='poid' required)
+                  p
+                    label Taille (cm)
+                    input(type='number' value=joueurs[i].taille name='taille' required)
+
+                  p.tit Statistiques
+                  p
+                    label Matchs joués
+                    input(type='number' value=joueurs[i].played_matchs name='matchs_joues' required)
+                  p
+                    label Buts
+                    input(type='number' value=joueurs[i].goals name='buts' required)
+                  p
+                    label Assist
+                    input(type='number' value=joueurs[i].assists name='assist' required)
+                  p
+                    label Points (Assist + Buts)
+                    input(type='number' value=joueurs[i].points name='points' required)
+                  p
+                    label Pénalités
+                    input(type='number' value=joueurs[i].penalty name='penalites' required)
+                  p
+                    label Tirs
+                    input(type='number' value=joueurs[i].shoots name='tirs' required)
+                  p
+                    label Efficacité (Tirs réussis)
+                    input(type='number' step="0.01" value=joueurs[i].efficiency name='efficacite' required)
+                  p
+                    label Blanchissages
+                    input(type='number' value=joueurs[i].shutouts name='blanchissages' required)
+                  p
+                    label Arrêts
+                    input(type='number' value=joueurs[i].saves name='arrets' required)
+                  p
+                    label Arrêts (%)
+                    input(type='number' step="0.01" value=joueurs[i].saves_percent name='arrets_prct' required)
+                    input(type='hidden' name='id' value=joueurs[i].id)
+                  input(type='submit' value='Mettre à jour').button
+
+                form(method='POST' action='/delete-membre?_method=DELETE' data-toggle='validator')
+                  input(type='hidden' name='id' value=joueurs[i].id)
+                  input(type='submit' value='Supprimer le joueur').button
+
+        .panel.panel-default
+          .panel-headings
+            p.panel-title
+              a(data-toggle='collapse' data-parent='#accordion' href='#collapse-add-membre')
+                | Ajouter un Membre
+          #collapse-add-membre.panel-collapse.collapse
+            .panel-body
+              form(action='/add-membre', enctype='multipart/form-data' method='POST' data-toggle='validator' required)
+                p.tit Vidéos, photos et drapeaux
+                p
+                  label Vidéos mp4
+                  input(type='file', accept='video/mp4' name='choosePlayerVideo2' multiple)
+                hr                
+                p
+                  label Photos 
+                  input(type='file', accept='.png' name='choosePlayerVideo2' multiple)
+                hr
+                p
+                  label Drapeaux
+                  input(type='file', accept='.jpg' name='choosePlayerVideo2' multiple)
+                hr   
+                p.tit Informations
+                p
+                  label Prénom
+                  input(type='text' value='' name='prenom' required)
+                p
+                  label Nom
+                  input(type='text' value='' name='nom' required)
+                p
+                  label Poste
+                  input(type='text' value='' name='poste' required)
+                p
+                  label Shoot
+                  input(type='text' value='' name='shoot' required)
+                p
+                  label Date de naisance
+                  input(type='date' value='' name='date_naissance' required)
+                p
+                  label Age
+                  input(type='number' value='' name='age' required)
+                p
+                  label Pays
+                  input(type='text' value='' name='pays' required)
+                p
+                  label Poid (kg)
+                  input(type='number' value='' name='poid' required)
+                p
+                  label Taille (cm)
+                  input(type='number' value='' name='taille' required)
+
+                p.tit Statistiques
+                p
+                  label Matchs joués
+                  input(type='number' value=0 name='matchs_joues' required)
+                p
+                  label Buts
+                  input(type='number' value=0 name='buts' required)
+                p
+                  label Assist
+                  input(type='number' value=0 name='assist' required)
+                p
+                  label Points (Assist + Buts)
+                  input(type='number' value=0 name='points' required)
+                p
+                  label Pénalités
+                  input(type='number' value=0 name='penalites' required)
+                p
+                  label Tirs
+                  input(type='number' value=0 name='tirs' required)
+                p
+                  label Efficacité (Tirs réussis)
+                  input(type='number' step="0.01" value=0 name='efficacite' required)
+                p
+                  label Blanchissages
+                  input(type='number' value=0 name='blanchissages' required)
+                p
+                  label Arrêts
+                  input(type='number' value=0 name='arrets' required)
+                p
+                  label Arrêts (%)
+                  input(type='number' step="0.01" value=0 name='arrets_prct' required)
+                input(type='submit' value='Ajouter').button
+
+
+                    //- PARTIE STAFF && STUFFS && THINGS
+    div
+      h3 Modifier/Ajouter les membres du staff
+
+      //- Collapsible Membres
+      #accordion.panel-group-main                  
+        - for (let i = 0; i < staffs.length; i++)
+          - let collapseID2 = 'collapse-membre2' + i;
+          .panel.panel-default
+            .panel-heading
+              p.panel-title
+                a(data-toggle='collapse' data-parent='#accordion' href='#' + collapseID2)
+                  | #{staffs[i].prenom} #{staffs[i].nom}
+            div(id = collapseID2).panel-collapse.collapse.in
+              .panel-body
+                form(method='POST', enctype='multipart/form-data' action='/edit-staff?_method=PUT' data-toggle='validator')
+                  p.tit Photos et drapeaux
+                  p
+                    label Photos 
+                    input(type='file', accept='.png' name='chooseStaff1' multiple)
+                  hr
+                  p
+                    label Drapeaux
+                    input(type='file', accept='.jpg' name='chooseStaff1' multiple)
+                  p.tit Informations
+                  p
+                    label Poste
+                    input(type='text' value=staffs[i].poste name='poste' required)
+                  p
+                    label Nom
+                    input(type='text' value=staffs[i].nom name='nom' required)
+                    input(type='hidden' name='id' value=staffs[i].id)
+                  input(type='submit' value='Mettre à jour').button
+
+                form(method='POST' action='/delete-staff?_method=DELETE' data-toggle='validator')
+                  input(type='hidden' name='id' value=staffs[i].id)
+                  input(type='submit' value='Supprimer la fiche staff').button
+
+        .panel.panel-default
+          .panel-headings
+            p.panel-title
+              a(data-toggle='collapse' data-parent='#accordion' href='#collapse-add-membre2')
+                | Ajouter un Membre du staff
+          #collapse-add-membre2.panel-collapse.collapse
+            .panel-body
+              form(action='/add-staff', enctype='multipart/form-data' method='POST' data-toggle='validator' required)
+                p.tit Photos et drapeaux
+                p
+                  label Photos 
+                  input(type='file', accept='.png' name='chooseStaff2' multiple)
+                hr
+                p
+                  label Drapeaux
+                  input(type='file', accept='.jpg' name='chooseStaff2' multiple)                
+                hr   
+                p.tit Informations
+                p
+                  label Nom
+                  input(type='text' value='' name='nom' required)
+                p
+                  label Poste
+                  input(type='text' value='' name='poste' required)
+                input(type='submit' value='Ajouter').button
+
+                //- FIN PARTIE STAFF
+  script(type='text/javascript' src='javascripts/admin.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js')

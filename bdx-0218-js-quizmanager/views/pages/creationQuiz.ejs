@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+
+  <header>
+    <% include ../partials/header %>
+  </header>
+
+<div class="col partie_creer2">
+  <div class="quizTitle">
+      <div class="row">
+          <div class="col">
+            <h1 id="numeroQuestion" class="titreCreer">A toi de jouer ! Crée ton QUIZ</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="cadreQuestion">
+
+              <input type="text" name="titre" placeholder="Inscris l'intitulé de ton quiz ici."  id="titre">
+              <br /> 
+              <h3 class="choisi">et choisi une catégorie: </h1>
+              <br /> 
+              <select class="category" id="category">
+                <option value="science">Science</option>
+
+                <option value="cinema">Cinéma</option>
+                <option value="musique">Musique</option>
+                <option value="sante">Santé</option>
+                <option value="sport">Sport</option>
+                <option value="amour">Amour</option>
+                <option value="societe">Société</option>
+                <option value="divers">Divers</option>
+              </select> 
+            </div>
+          </div>
+        </div>
+  </div>
+  
+  <div id="quizAnswers">
+      <div class="row">
+          <div class="col">
+              <div class="cadreQuestion">
+                  <input type="text" id="question" name="question" placeholder="Pose ici la question de ton quizz." value="">
+                    <br> Max : 120 caractères.
+                    <br> Exemple : Quels sont les états d’un fluide ?
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="cadreReponse">
+              <input id="reponse1" type="text" name="reponse1" placeholder="Ecris ici ta première réponse">
+              <input id="great1" type="radio" name="great">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="cadreReponse">
+              <input id="reponse2" type="text" name="reponse2" placeholder="Ecris ici ta deuxième réponse">
+              <input id="great2" type="radio" name="great">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="cadreReponse">
+              <input id="reponse3" type="text" name="reponse3" placeholder="Ecris ici ta troisième réponse">
+              <input id="great3" type="radio" name="great">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="cadreReponse">
+              <input id="reponse4" type="text" name="reponse4" placeholder="Ecris ici ta quatrième réponse">
+              <input id="great4" type="radio" name="great">
+            </div>
+          </div>
+        </div>
+  </div>
+  
+
+  <div class="row boutonsCreationAide">
+    <div class="col" id="returnButton">
+      <h2 class="oui move" id="past" >PAST</h2>
+    </div>
+    <div class="col" id="tryQuiz">
+      <h2 class="oui move" id="next">NEXT</h2>
+    </div>
+  </div>
+
+      <div class="row boutonsCreationAide">
+        <div class="col">
+          <h2 class="oui" id="textOui">Débuter</h2>
+        </div>
+      </div>
+</div>
+
+
+<div class="col partie_creer1">
+    <div class="row">
+      <div class="col">
+      </div>
+    </div>
+
+    <div class="speech">
+      <p id="quizyTalk">Choisis bien ces éléments, tu ne pourras pas les changer.</p>
+    </div>
+
+    <div class = "col quizzyPng">
+      <img class = "quizzy" src="/views/img/red-pingouin.png" alt="pingouin">
+    </div>
+
+</div>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+  <% include ../partials/scripts %>
+  <script src="/views/js/ajax.js"></script>
+  <script src="/views/js/createQuiz.js"></script>
+</body>
+</html>

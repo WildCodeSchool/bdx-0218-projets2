@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <% include ../partials/head %>
+</head>
+<body>
+
+
+<header>
+  <% include ../partials/headerAdmin %>
+</header>
+
+</br>
+    <section class="titre_faq">
+        <h1>Administration de l'accueil</h1>
+    </section>
+
+    <section>
+
+        <form method="POST" action="/accueilModify">
+            <input type="text" name="text1" value="<%= text[0].text1 %>" />
+            <input type="text" name="text2" value="<%= text[0].text2 %>" />
+            <input type="hidden" name="id" value="<%= text[0].id %>" />
+            <input type="submit" value="Modifier" />
+        </form>
+
+        <form method="POST" action="/accueilModify">
+            <input type="text" name="text1" value="<%= text[1].text1 %>" />
+            <input type="text" name="text2" value="<%= text[1].text2 %>" />
+            <input type="hidden" name="id" value="<%= text[1].text2 %>" />
+            <input type="submit" value="Modifier" />
+        </form>
+
+        <form method="POST" action="/accueilModify">
+            <input type="text" name="text1" value="<%= text[2].text1 %>" />
+            <input type="text" name="text2" value="<%= text[2].text2 %>" />
+            <input type="hidden" name="id" value="<%= text[2].id %>" />
+            <input type="submit" value="Modifier" />
+        </form>
+
+    </section>
+    <div id="backDiv"></div>
+    <% include ../partials/scriptsAdmin %>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+    <% include ../partials/scripts %>
+    </body>
+    
+    </html>
+    

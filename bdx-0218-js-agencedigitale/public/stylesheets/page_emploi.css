@@ -1,0 +1,113 @@
+/* -----------------------------
+CSS de la section emploi dans la page emploi
+--------------------------------- */
+#offre_emploi{
+    margin-top: 3%;
+}
+
+
+.titre_missions{
+    text-align: center;
+    margin-top: 7%;
+    font-weight: bold;
+}
+
+/* display flex pour la photo d'un côté, les info de l'autre */
+#offre_emploi .info_emploi{
+    display:flex;
+    height: 180px;
+}
+
+#offre_emploi .logo_entreprise{
+    width:150px;
+    height: 150px;
+    border:2px black double;
+}
+
+#offre_emploi .list_detail{
+    list-style-type: none;
+    text-align: left;
+}
+
+#offre_emploi .list_detail > li{
+    padding-bottom: 5%;
+}
+
+#offre_emploi .liste_emploi{
+    display:flex;
+}
+
+/* Controle des dimensions de la fenetre modal */
+#offre_emploi .modal-lg {
+    min-width: 75%;
+    margin:auto;
+}
+
+
+#offre_emploi .modal-lg .modal-content {
+    min-height: 50vh;
+}
+
+#offre_emploi .profil_modal, #offre_emploi .contexte_annonce, #offre_emploi .descri_entreprise{
+    text-align: left;
+    text-align: justify;
+}
+
+#offre_emploi .logo_modal{
+    margin-top:5%;
+    margin-left: 15%;
+    width:300px;
+    height: 300px;
+    border:2px black double;
+}
+
+#offre_emploi .competence_modal{
+    margin-top: 5%;
+}
+
+#offre_emploi .competence_modal > ul{
+    text-align: left;
+    margin-left: 2%;
+    padding-left: 0;
+}
+
+#offre_emploi .content_emploi{
+    margin-top : 3%;
+    margin-bottom: 3%;
+}
+
+#offre_emploi .btn_modal_emploi{
+    background-color: rgb(216,16,50);
+    border:1px rgb(216,16,50) solid;
+}
+
+#offre_emploi h2, #offre_emploi h3, #offre_emploi h4 {
+    font-weight: bold;
+}
+
+
+#offre_emploi .txt_profil_modal{
+    width:30vw;
+    text-align: left;
+    font-size: 1rem;
+    font-family: lato;
+    white-space : pre-wrap;
+}
+
+
+@media screen and (max-width: 540px){
+    #offre_emploi .content_emploi{
+        margin-top : 10%;
+        margin-bottom: 10%;
+    }
+    #offre_emploi .logo_modal{
+        display: none;
+    }
+    #offre_emploi{
+        margin-top: 20%;
+    }
+    #offre_emploi .profil_modal{
+        margin-top:12%;
+        margin-bottom: 12%;
+    }
+}

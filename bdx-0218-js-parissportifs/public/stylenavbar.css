@@ -1,0 +1,54 @@
+.navbar-custom {
+    height: 93vh;
+    }
+    
+    .bouton_deconnexion{
+    border-color:#11ffee00;;
+    background: #11ffee00;
+    width: 40px;
+    
+    }
+    
+    .iconBurger{
+    border-color:#11ffee00;;
+    background: #11ffee00;
+    }
+    
+    
+    @media (max-width:750px){
+    .titre_navbar{    margin-top: 90px;
+     }
+
+    .yop {
+        margin-top: 25px;
+        
+    }
+    .yep {
+        margin-top: 30px;
+        
+    }
+    .bouton_deconnexion 
+    {
+        margin-top: 90px;
+        width:120px;
+        font-family: 'Gugi', cursive;
+        
+    }
+    .bouton_deconnexion a {
+        color:black;
+    }
+
+    }
+    @media (min-width:750px) {
+    .navbar-custom {
+    height: 5vh;
+    }
+    .vertig {
+        display:none;
+    }
+}
+
+
+
+    
+

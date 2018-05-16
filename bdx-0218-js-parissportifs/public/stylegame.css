@@ -1,0 +1,28 @@
+
+
+/* ----- Navbar games ----- */ 
+
+.nav-games {
+  background-color: rgb(255, 255, 255);
+  padding-top: 100px;
+}
+
+.nav-games li img {
+  border-radius: 0.2rem;
+}
+
+@media (max-width: 800px) {
+  .nav-games {
+    padding-top: 70px;
+  }
+
+@media (max-width: 600px) {
+  .nav-games {
+    padding-top: 60px;
+  }
+@media (min-width: 200px) {
+    .nav-games {
+      padding-top: 70px;
+  }
+
+  

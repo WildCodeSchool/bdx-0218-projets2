@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <section class="titre_faq">
+        <h1>Page d'administration</h1>
+    </section>
+
+    <section class="titre">
+        <p>Bienvenue sur l'espace d'administration du quizland</p>
+    </section>
+
+    <section>
+        <div class="row buttons">
+            <a href="/adminAccueil">
+                <h3 class="bouton_de_gauche">Modifier l'accueil</h2>
+            </a>
+            <a href="/adminFaq">
+                <h3 class="bouton_de_droite">Modifier les FAQ</h2>
+            </a>
+        </div>
+        <div class="row buttons">
+            <a href="/checkList" style="text-decoration:none">
+                <h3 class="bouton_de_gauche">Validation des quizs</h2>
+            </a>
+            <a href="/editList" style="text-decoration:none">
+                <h3 class="bouton_de_droite">Modification des quiz</h2>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+    <% include ../partials/scripts %>
+
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  body
+    section(id='admin wrapper')
+      #sidebar-wrapper
+        ul.sidebar-nav
+          li.nav-profile
+            .profile-image
+              img(src='/images/alex.jpg')
+            .profile-name
+              p.name Alexandre Lorion
+            .profile-name
+              a(href='/', class='deconnexion btn btn-primary') Deconnexion
+          li.mt-4
+            a.links#modifBar(href='#', data-showdiv='contentBar') Bar
+          li
+            a.links#modifBlog(href='#', data-showdiv='contentBlog') Blog
+          li
+            a.links#modifOffres(href='#', data-showdiv='contentOffres') Offres Emplois
+          li
+            a.links#modifCollab(href='#', data-showdiv='contentCollab') Collaborateurs
+          li
+            a.links#modifContact(href='#', data-showdiv='contentFooter') Contact
+          li
+            a.links#modifValidation(href='#', data-showdiv='contentValidation') Validation
+      #page-content-wrapper
+        .container-fluid
+          include admin_modal.pug
+          include admin_bar.pug
+          include admin_blog.pug
+          include admin_miss.pug
+          include admin_collab.pug
+          include admin_contact.pug
+          include admin_valid.pug

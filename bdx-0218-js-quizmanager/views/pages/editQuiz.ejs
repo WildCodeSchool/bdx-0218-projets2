@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <% include ../partials/head %>
+</head>
+<body>
+
+    	<header>
+                <% include ../partials/headerAdmin %>
+        </header>
+
+</br>
+    <section class="titre_faq">
+
+        <h1>Modification du Quiz</h1>
+
+    </section>
+
+    <section>
+        <div class="bob">
+            <% for(var i=0; i < quiz.questions.length; i++) { %>
+               
+               <form method="POST" action="/quizModify">
+                <input class="modQstform" type="text" name="qstTitre" value="<%= quiz.questions[i].question %>" />
+                <input type="hidden" name="id" value="<%= quiz.questions[i].id %>" />
+
+                <input type="text" name="qstrep01" value="<%= quiz.questions[i].answers[0].answer %>" />
+                <input type="hidden" name="qstid01" value="<%= quiz.questions[i].answers[0].id  %>" />
+                <input class="btngreat" id="great1" type="radio" name="great" value="<%= quiz.questions[i].answers[0].id  %>"> 
+                
+
+                <input type="text" name="qstrep02" value="<%= quiz.questions[i].answers[1].answer %>" />
+                <input type="hidden" name="qstid02" value="<%= quiz.questions[i].answers[1].id  %>" />
+                <input class="btngreat" id="great2" type="radio" name="great" value="<%= quiz.questions[i].answers[1].id  %>">
+                
+
+                <input type="text" name="qstrep03" value="<%= quiz.questions[i].answers[2].answer %>" />
+                <input type="hidden" name="qstid03" value="<%= quiz.questions[i].answers[2].id  %>" />
+                <input class="btngreat" id="great3" type="radio" name="great" value="<%= quiz.questions[i].answers[2].id  %>">
+                
+
+                <input type="text" name="qstrep04" value="<%= quiz.questions[i].answers[3].answer %>" />
+                <input type="hidden" name="qstid04" value="<%= quiz.questions[i].answers[3].id  %>" />
+                <input class="btngreat" id="great4" type="radio" name="great" value="<%= quiz.questions[i].answers[3].id  %>">
+               
+
+                <input type="submit" value="Modifier" />
+               </form>
+            <% } %>
+         </div>
+
+    </section>
+    <div id="backDiv"></div>
+    <% include ../partials/scriptsAdmin %>
+
+<footer>
+    <% include ../partials/footer %>
+</footer>
+    <% include ../partials/scripts %>
+
+</body>
+
+</html>

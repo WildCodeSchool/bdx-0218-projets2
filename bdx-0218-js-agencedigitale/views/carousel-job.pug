@@ -1,0 +1,24 @@
+section#job.bg-white.pt-l.pb-l
+  .container
+    .slick
+      - for (let i = 0; i < emploi.length; i++)
+          - let url_files = emploi[i].logo
+          - let src_logo = '/images/emplois/'
+          - let src_final = src_logo+ url_files
+          - let duree = emploi[i].duree
+          - let ville = emploi[i].localisation
+          article
+            h2.text-center= emploi[i].nom_poste
+            figure
+              img.float-left.mr-3(src=src_final)
+              figcaption
+                h3= emploi[i].recruteur
+            div
+              p.mb-0
+                i.fas.fa-briefcase.mr-2
+                | #{duree}
+              p.mb-0
+                i.fas.fa-map-marker-alt.mr-2
+                | #{ville}
+             
+                

@@ -1,0 +1,26 @@
+// BARRE DE NAVIGATION
+nav.navbar.navbar-expand-lg.fixed-top.navbar-light.cl-effect-5
+  .container.position-relative
+    a#log.navbar-brand(href='/')
+      if page == 'recruteur'
+        img.img-fluid(src='/images/logo-recrut.jpg' alt='logo')
+      else
+        img.img-fluid(src='/images/wny-logo.jpg' alt='logo')
+      if page == "developpeur"
+          a.navbar-recruteur(href='/recruteur')
+            span(data-hover='RECRUTEUR') RECRUTEUR
+      else
+          a.navbar-recruteur(href='/')
+            span(data-hover='DEVELOPPEUR') DEVELOPPEUR
+      // BURGER RESPONSIVE
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarTogglerDemo02' aria-controls='navbarTogglerDemo02' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      // MENU NAVIGATION
+      #navbarTogglerDemo02.collapse.navbar-collapse
+        ul.nav.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link(href='/concept') Notre concept
+          li.nav-item
+            a.nav-link(href='/emploi') Nos missions
+          li#border.nav-item
+            a.nav-link(href='/blog') Blog

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+    <p id="titre"></p>
+    <section class="searchquiz">
+        <div class="backgroundcaroussel">
+
+            <div class="content">
+
+                <div class="rowa">
+                    <div class="col whiteframe">
+                        <h1 class="decouvrez">TOUS NOS QUIZS</h1>
+
+
+                        <!-- <div class="rowi">
+                                <h2 class="trier">Trier par date 📅 </h2>
+                        </div>
+                        <div class="rowi">
+                                <h2 class="trier">Filtrer par catégorie  🐦 </h2>  
+                        </div> -->
+
+
+                        <div class="rowa">
+                            <div class="col smallsquare">
+
+                                <a href="/questionspage/<%= titre[0].id %>">
+                                    <div class="col whitesquare">
+                                        <img src="/views/img/<%= titre[0].category %>.png" alt="category icon" />
+                                        <div class="col redrectangle">
+                                            <h2>
+                                                <%=titre[0].title%>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col smallsquare">
+                                <a href="/questionspage/<%= titre[1].id %>">
+                                    <div class="col whitesquare">
+                                        <img src="/views/img/<%= titre[1].category %>.png" alt="category icon" />
+                                        <div class="col redrectangle">
+                                            <h2>
+                                                <%=titre[1].title%>
+                                            </h2>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col smallsquare">
+                                <a href="/questionspage/<%= titre[2].id %>">
+                                    <div class="col whitesquare">
+                                        <img src="/views/img/<%= titre[2].category %>.png" alt="category icon" />
+                                        <div class="col redrectangle">
+                                            <h2>
+                                                <%=titre[2].title%>
+                                            </h2>
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col smallsquare">
+                                <a href="/questionspage/<%= titre[3].id %>">
+                                    <div class="col whitesquare">
+                                        <img src="/views/img/<%= titre[3].category %>.png" alt="category icon" />
+                                        <div class="col redrectangle">
+                                            <h2>
+                                                <%=titre[3].title%>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col smallsquare">
+                                <a href="/questionspage/<%= titre[4].id %>">
+                                    <div class="col whitesquare">
+                                        <img src="/views/img/<%= titre[4].category %>.png" alt="category icon" />
+                                        <div class="col redrectangle">
+                                            <h2>
+                                                <%=titre[4].title%>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col smallsquare">
+
+                                <a href="/questionspage/<%= titre[5].id %>">
+                                    <div class="col whitesquare">
+                                        <img src="/views/img/<%= titre[5].category %>.png" alt="category icon" />
+                                        <div class="col redrectangle">
+                                            <h2>
+                                                <%=titre[5].title%>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col smallsquare">
+                                <a href="/questionspage/<%= titre[6].id %>">
+                                    <div class="col whitesquare">
+                                        <img src="/views/img/<%= titre[6].category %>.png" alt="category icon" />
+                                        <div class="col redrectangle">
+                                            <h2>
+                                                <%=titre[6].title%>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col smallsquare">
+                                <a href="/questionspage/<%= titre[7].id %>">
+                                    <div class="col whitesquare">
+                                        <img src="/views/img/<%= titre[7].category %>.png" alt="category icon" />
+                                        <div class="col redrectangle">
+                                            <h2>
+                                                <%=titre[7].title%>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col smallsquare">
+                                <a href="/questionspage/<%= titre[8].id %>">
+                                    <div class="col whitesquare">
+                                        <img src="/views/img/<%= titre[8].category %>.png" alt="category icon" />
+                                        <div class="col redrectangle">
+                                            <h2>
+                                                <%=titre[8].title%>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col smallsquare">
+                                <a href="/questionspage/<%= titre[9].id %>">
+                                    <div class="col whitesquare">
+                                        <img src="/views/img/<%= titre[9].category %>.png" alt="category icon" />
+                                        <div class="col redrectangle">
+                                            <h2>
+                                                <%=titre[9].title%>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col smallsquare">
+                                <a href="/questionspage/<%= titre[10].id %>">
+                                    <div class="col whitesquare">
+                                        <img src="/views/img/<%= titre[10].category %>.png" alt="category icon" />
+                                        <div class="col redrectangle">
+                                            <h2>
+                                                <%=titre[10].title%>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col smallsquare">
+                                <a href="/questionspage/<%= titre[11].id %>">
+                                    <div class="col whitesquare">
+                                        <img src="/views/img/<%= titre[11].category %>.png" alt="category icon" />
+                                        <div class="col redrectangle">
+                                            <h2>
+                                                <%=titre[11].title%>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+
+    <div class="rowi">
+        <form method="POST" action="questionspage/">
+            <input id="truc"  type="text" name="number_quiz" placeholder="Inscrire son n° de quiz">
+            <input type="submit" value="jouer"/>
+        </form>
+    </div>
+  </searchquiz>
+
+<footer>
+    <% include ../partials/footer %>
+</footer>
+<% include ../partials/scripts %>
+<script type="text/javascript">
+let titre = <%- JSON.stringify(titre,0,2) %>
+</script>
+
+
+</body>
+
+</html>
